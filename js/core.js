@@ -341,11 +341,15 @@
     const header = document.getElementById('site-header');
     if (!header) return;
 
+    var ticking = false;
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
