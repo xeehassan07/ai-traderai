@@ -197,9 +197,9 @@
             </a>
             <p>AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
             <p style="font-size:0.8125rem;color:rgba(255,255,255,0.5);margin-top:12px;line-height:1.8;">
-              📍 71-75 Shelton Street, London, WC2H 9JQ<br>
-              ✉️ support@traderai.com<br>
-              📞 +44 20 7123 4567
+              📞 UK +44 20 3927 2999<br>
+              📞 AU +61 2 8488 9800<br>
+              ✉️ info@traderai.ai
             </p>
           </div>
           <div class="footer-column">
