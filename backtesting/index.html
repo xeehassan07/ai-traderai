@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy Backtesting | Test Trading Rules | Trader AI</title>
+  <meta name="description" content="Test your trading strategy against historical data. Configure parameters, run backtests and review net return, drawdown, win rate and profit factor.">
+  <link rel="canonical" href="https://traderai.com/backtesting/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Strategy Backtesting | Test Trading Rules Historically | Trader AI">
+  <meta property="og:description" content="Test your trading strategy against historical data. Configure parameters, run backtests and review performance metrics.">
+  <meta property="og:url" content="https://traderai.com/backtesting/">
+  <meta property="og:image" content="https://traderai.com/assets/images/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strategy Backtesting | Test Trading Rules Historically | Trader AI">
+  <meta name="twitter:description" content="Test your trading strategy against historical data. Configure parameters, run backtests and review performance metrics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Backtesting","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"Test trading strategies against historical data.","url":"https://traderai.com/backtesting/","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://traderai.com/"},{"@type":"ListItem","position":2,"name":"Backtesting","item":"https://traderai.com/backtesting/"}]}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is strategy backtesting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Backtesting applies your trading strategy rules to historical market data to see how it would have performed. It calculates key metrics like net return, max drawdown, win rate and profit factor — helping you evaluate a strategy before risking real capital."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do backtested results guarantee live performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Backtested results are based on historical data and cannot predict future market behaviour. Real trading involves additional factors — slippage, liquidity, emotional pressure — that backtests cannot fully reproduce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What costs are included in the backtest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can configure trading fees, spread and slippage in the backtest settings. These costs are applied to each trade to provide a more realistic performance estimate. All assumptions are visible in the results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I backtest any strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can backtest strategies created in the Strategy Builder or manually configure your own parameters. The backtesting engine supports trend following, momentum, mean reversion, breakout and multi-factor strategies across multiple markets."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header" role="banner">
+  <noscript>
+    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
+        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
+        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
+        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
+        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
+        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
+        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
+        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
+      </nav>
+    </div>
+  </noscript>
+</header>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="hero-eyebrow">Strategy Backtesting</span>
+          <h1>Test the Rules Before You Trust the Idea</h1>
+          <p>Run your strategy against historical market data. Review performance, risk, costs and weaknesses — before considering it with real funds.</p>
+          <div class="page-hero-actions">
+            <a href="#config" class="btn btn-primary btn-lg">Configure a Backtest</a>
+            <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERT -->
+    <section class="section-sm">
+      <div class="container" style="max-width:800px;">
+        <div class="alert alert-warning">Backtested results do not guarantee future performance. Past results reflect historical conditions that may not repeat. All data shown is illustrative.</div>
+      </div>
+    </section>
+
+    <!-- CONFIG + REPORT -->
+    <section class="section" id="config">
+      <div class="container" style="max-width:900px;">
+        <div class="section-header">
+          <span class="section-eyebrow">Backtest Configuration</span>
+          <h2>Configure and Run Your Backtest</h2>
+          <p>Fill in your strategy parameters below and run the simulation against historical data.</p>
+        </div>
+
+        <!-- Config Card -->
+        <div style="background:var(--terminal-bg);border:1px solid rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;">
+          <div style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);">Strategy Parameters</span>
+          </div>
+          <div style="padding:24px;">
+            <div class="backtest-config" style="gap:20px;">
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Strategy Name</label><input class="form-input" type="text" id="bt-strategy" value="Trend Following EMA Crossover" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Market</label><select class="form-select" id="bt-market" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"><option>Forex</option><option>Indices</option><option>Commodities</option><option selected>Crypto</option><option>Stocks</option></select></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Instrument</label><input class="form-input" type="text" id="bt-instrument" value="EUR/USD" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Timeframe</label><select class="form-select" id="bt-timeframe" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"><option>1m</option><option>5m</option><option>15m</option><option>1H</option><option>4H</option><option selected>Daily</option><option>Weekly</option></select></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Start Date</label><input class="form-input" type="date" id="bt-start-date" value="2025-01-01" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">End Date</label><input class="form-input" type="date" id="bt-end-date" value="2025-12-31" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Starting Balance (£)</label><input class="form-input" type="number" id="bt-balance" value="10000" step="100" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Position Sizing</label><select class="form-select" id="bt-position-sizing" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"><option>Fixed %</option><option>Fixed Amount</option><option>Kelly</option></select></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Trading Fees (%)</label><input class="form-input" type="number" id="bt-fees" value="0.10" step="0.01" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Spread</label><input class="form-input" type="number" id="bt-spread" value="0.0001" step="0.00001" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Slippage</label><input class="form-input" type="number" id="bt-slippage" value="0.001" step="0.0001" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+              <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.5);">Risk Limit (%)</label><input class="form-input" type="number" id="bt-risk-limit" value="2" step="0.1" style="background:rgba(0,0,0,0.2);border-color:rgba(255,255,255,0.08);color:#fff;"></div>
+            </div>
+            <div style="text-align:center;margin-top:24px;">
+              <button class="btn btn-primary btn-lg" id="bt-run-btn" style="background:var(--terminal-accent);min-width:200px;">Run Backtest</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="loading-spinner" id="bt-loading" style="display:none;">Running backtest simulation...</div>
+
+        <!-- REPORT -->
+        <div id="backtest-report" style="display:none;margin-top:24px;">
+          <div style="background:var(--terminal-bg);border:1px solid rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;">
+            <div style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);">Backtest Report</span>
+                <h3 style="color:#fff;margin:4px 0 0;font-size:1.125rem;">Trend Following EMA Crossover</h3>
+                <p style="color:rgba(255,255,255,0.35);font-size:0.75rem;margin:2px 0 0;">EUR/USD · Daily · Jan–Dec 2025</p>
+              </div>
+              <span class="badge badge-illustrative">Illustrative</span>
+            </div>
+            <div style="padding:24px;">
+              <div class="terminal-metrics" style="margin-bottom:24px;">
+                <div class="terminal-metric"><div class="terminal-metric-value" style="color:#22C55E;">+12.40%</div><div class="terminal-metric-label">Net Return</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value" style="color:#EF4444;">-7.20%</div><div class="terminal-metric-label">Max Drawdown</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value">342</div><div class="terminal-metric-label">Trades</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value">54.8%</div><div class="terminal-metric-label">Win Rate</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value" style="color:#22C55E;">+1.15%</div><div class="terminal-metric-label">Avg Gain</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value" style="color:#EF4444;">-0.89%</div><div class="terminal-metric-label">Avg Loss</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value">1.54</div><div class="terminal-metric-label">Profit Factor</div></div>
+                <div class="terminal-metric"><div class="terminal-metric-value">32%</div><div class="terminal-metric-label">Exposure</div></div>
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);display:block;margin-bottom:12px;">Equity Curve</span>
+                <div style="height:140px;background:rgba(0,0,0,0.2);border-radius:8px;overflow:hidden;">
+                  <svg viewBox="0 0 600 140" preserveAspectRatio="none" style="width:100%;height:100%;">
+                    <defs><linearGradient id="eqGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22C55E" stop-opacity="0.15"/><stop offset="100%" stop-color="#22C55E" stop-opacity="0"/></linearGradient></defs>
+                    <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.04)"/>
+                    <path d="M0,100 L30,105 L60,95 L90,108 L120,90 L150,102 L180,85 L210,95 L240,80 L270,92 L300,75 L330,88 L360,70 L390,82 L420,65 L450,78 L480,60 L510,72 L540,55 L570,68 L600,50" stroke="#22C55E" stroke-width="1.5" fill="none"/>
+                    <path d="M0,100 L30,105 L60,95 L90,108 L120,90 L150,102 L180,85 L210,95 L240,80 L270,92 L300,75 L330,88 L360,70 L390,82 L420,65 L450,78 L480,60 L510,72 L540,55 L570,68 L600,50 L600,140 L0,140Z" fill="url(#eqGrad)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div style="margin-bottom:24px;">
+                <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);display:block;margin-bottom:12px;">Monthly Performance</span>
+                <div style="overflow-x:auto;">
+                  <table style="width:100%;border-collapse:collapse;font-size:12px;">
+                    <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Jan</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Feb</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Mar</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Apr</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">May</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Jun</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Jul</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Aug</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Sep</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Oct</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Nov</th><th style="padding:8px 6px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.3);font-weight:600;">Dec</th></tr></thead>
+                    <tbody><tr style="border-bottom:1px solid rgba(255,255,255,0.03);"><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+1.82%</td><td style="padding:8px 6px;text-align:center;color:#EF4444;font-weight:700;">-0.95%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+2.10%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+1.45%</td><td style="padding:8px 6px;text-align:center;color:#EF4444;font-weight:700;">-0.30%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+2.55%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+1.10%</td><td style="padding:8px 6px;text-align:center;color:#EF4444;font-weight:700;">-1.75%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+0.85%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+3.20%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+1.65%</td><td style="padding:8px 6px;text-align:center;color:#22C55E;font-weight:700;">+0.68%</td></tr></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div style="background:rgba(0,0,0,0.2);border-radius:8px;padding:16px;">
+                <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.25);display:block;margin-bottom:8px;">Assumptions & Limitations</span>
+                <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;margin:0;">Fills assumed at stated prices. Slippage and spread are static averages. Trading fees applied as fixed %. Does not include weekend gaps, news events, or volatility spikes. Backtested performance reflects historical conditions that may not repeat. Past results do not guarantee future performance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section bg-off-white">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is strategy backtesting?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Backtesting applies your trading strategy rules to historical market data to see how it would have performed. It calculates key metrics like net return, max drawdown, win rate and profit factor — helping you evaluate a strategy before risking real capital.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do backtested results guarantee live performance?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Backtested results are based on historical data and cannot predict future market behaviour. Real trading involves additional factors — slippage, liquidity, emotional pressure — that backtests cannot fully reproduce.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What costs are included in the backtest?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>You can configure trading fees, spread and slippage in the backtest settings. These costs are applied to each trade to provide a more realistic performance estimate. All assumptions are visible in the results.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can I backtest any strategy?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>You can backtest strategies created in the <a href="/ai-strategy-builder/">Strategy Builder</a> or manually configure your own parameters. The backtesting engine supports trend following, momentum, mean reversion, breakout and multi-factor strategies across multiple markets.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--off-white);padding:80px 0;border-top:1px solid var(--border);">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Get Started</span>
+        <h2 style="color:var(--deep-navy);font-size:2rem;margin-bottom:12px;">Ready to Test Your Strategy?</h2>
+        <p style="color:var(--muted);font-size:1.0625rem;max-width:550px;margin:0 auto 24px;">Configure a backtest, review the results, and understand your strategy's historical behaviour.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+          <a href="/register/" class="btn btn-secondary btn-lg">Create Free Access</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+  <noscript>
+    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
+      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
+      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
+    </div>
+  </noscript>
+</footer>
+  <script src="/js/utils.js"></script>
+  <script src="/js/core.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var runBtn = document.getElementById('bt-run-btn');
+    var loadingEl = document.getElementById('bt-loading');
+    var reportEl = document.getElementById('backtest-report');
+    var visible = false;
+
+    runBtn.addEventListener('click', () => {
+      if (visible) { reportEl.style.display = 'none'; visible = false; runBtn.textContent = 'Run Backtest'; return; }
+      runBtn.disabled = true;
+      runBtn.classList.add('btn-loading');
+      runBtn.textContent = 'Running...';
+      loadingEl.style.display = 'flex';
+      setTimeout(() => {
+        loadingEl.style.display = 'none';
+        runBtn.disabled = false;
+        runBtn.classList.remove('btn-loading');
+        runBtn.textContent = 'Hide Report';
+        reportEl.style.display = 'block';
+        visible = true;
+      }, 1500);
+    });
+  });
+  </script>
+</body>
+</html>

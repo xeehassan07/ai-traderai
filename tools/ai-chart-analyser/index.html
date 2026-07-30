@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chart Analyser | Upload and Analyse Trading Charts</title>
+  <meta name="description" content="Upload a chart screenshot and receive an organised analysis of visible trends, price zones, momentum and potential risk scenarios.">
+  <link rel="canonical" href="https://traderai.com/tools/ai-chart-analyser/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Chart Analyser | Upload and Analyse Trading Charts">
+  <meta property="og:description" content="Upload a chart screenshot and receive an organised analysis of visible trends, price zones, momentum and potential risk scenarios.">
+  <meta property="og:url" content="https://traderai.com/tools/ai-chart-analyser/">
+  <meta property="og:image" content="https://traderai.com/assets/images/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Chart Analyser | Upload and Analyse Trading Charts">
+  <meta name="twitter:description" content="Upload a chart screenshot and receive an organised analysis of visible trends, price zones, momentum and potential risk scenarios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Chart Analyser","applicationCategory":"Trading Application","operatingSystem":"Web","description":"Upload a chart screenshot and receive an organised analysis of visible trends, price zones, momentum and potential risk scenarios.","url":"https://traderai.com/tools/ai-chart-analyser/"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://traderai.com/"},{"@type":"ListItem","position":2,"name":"AI Chart Analyser","item":"https://traderai.com/tools/ai-chart-analyser/"}]}
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header" role="banner">
+  <noscript>
+    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
+        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
+        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
+        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
+        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
+        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
+        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
+        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
+      </nav>
+    </div>
+  </noscript>
+</header>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="hero-eyebrow">AI Chart Analyser</span>
+          <h1>Upload a Chart. Get a Structured AI Analysis.</h1>
+          <p>Upload a chart screenshot and receive an organised analysis of visible trends, price zones, momentum and potential risk scenarios.</p>
+          <div class="page-hero-actions">
+            <a href="#upload-section" class="btn btn-primary btn-lg">Upload Your Chart</a>
+            <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPLOAD + ANALYSIS SPLIT -->
+    <section class="section" id="upload-section">
+      <div class="container">
+        <div class="chart-split">
+          <!-- LEFT: Upload -->
+          <div class="chart-split-left">
+            <h3 style="margin-bottom:16px;">Upload Your Chart</h3>
+            <div class="upload-zone" id="upload-zone" style="min-height:200px;">
+              <div class="upload-icon">📤</div>
+              <h4>Drop a Chart Screenshot Here</h4>
+              <p>PNG, JPG, JPEG or WEBP — Max 10 MB</p>
+              <input type="file" id="chart-file-input" accept=".png,.jpg,.jpeg,.webp" style="display:none;">
+            </div>
+            <div class="upload-preview" id="upload-preview">
+              <img id="upload-preview-img" src="" alt="Chart preview">
+            </div>
+            <div class="grid grid-3" style="margin-top:16px;">
+              <div class="form-group">
+                <label class="form-label" for="chart-market">Market</label>
+                <select class="form-select" id="chart-market">
+                  <option value="">Select...</option><option value="forex">Forex</option><option value="indices">Indices</option><option value="commodities">Commodities</option><option value="crypto">Crypto</option><option value="stocks">Stocks</option><option value="etfs">ETFs</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="chart-timeframe">Timeframe</label>
+                <select class="form-select" id="chart-timeframe">
+                  <option value="">Select...</option><option value="1m">1m</option><option value="5m">5m</option><option value="15m">15m</option><option value="1h">1H</option><option value="4h">4H</option><option value="daily">Daily</option><option value="weekly">Weekly</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="chart-objective">Objective</label>
+                <select class="form-select" id="chart-objective">
+                  <option value="">Select...</option><option value="structure">Structure</option><option value="trend">Trend</option><option value="support-resistance">S/R</option><option value="momentum">Momentum</option><option value="comprehensive">All</option>
+                </select>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:20px;">
+              <a href="/register/" id="submit-analysis-btn" class="btn btn-primary btn-lg" style="opacity:0.5;pointer-events:none;">Submit for Deep Analysis →</a>
+            </div>
+            <div class="loading-spinner" id="chart-loading" style="display:none;margin-top:16px;">Analysing chart image...</div>
+          </div>
+
+          <!-- RIGHT: Sample Output -->
+          <div class="chart-split-right">
+            <h3 style="margin-bottom:16px;">Sample Analysis Output</h3>
+            <div class="chart-analysis-output">
+              <div class="analysis-row"><span class="analysis-row-label">Detected Trend</span><span class="analysis-row-value bullish">▲ Bullish Structure</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Key Support</span><span class="analysis-row-value">1.0780</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Key Resistance</span><span class="analysis-row-value">1.0920</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Bullish Scenario</span><span class="analysis-row-value">Break above 1.0920 → 1.1050</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Bearish Scenario</span><span class="analysis-row-value bearish">Break below 1.0780 → 1.0700</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Invalidation</span><span class="analysis-row-value">Below 1.0740</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Risk Considerations</span><span class="analysis-row-value">Economic data may impact</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Analysis Confidence</span><span class="analysis-row-value">Moderate</span></div>
+            </div>
+            <div style="background:var(--off-white);border-radius:10px;padding:16px;margin-top:16px;">
+              <h4 style="margin-bottom:8px;">What You'll Get</h4>
+              <ul style="font-size:0.875rem;color:var(--muted-dark);line-height:1.8;padding-left:18px;">
+                <li>Trend direction and market structure analysis</li>
+                <li>Key support and resistance price zones</li>
+                <li>Bullish and bearish scenarios with targets</li>
+                <li>Invalidation levels and risk considerations</li>
+                <li>Confidence rating with stated limitations</li>
+              </ul>
+            </div>
+            <p style="font-size:0.75rem;color:var(--muted);margin-top:12px;">Chart analysis is based only on visible information and can be incomplete or incorrect. This is a sample output for demonstration. <a href="/register/">Create your free account</a> to access full analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+  <noscript>
+    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
+      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
+      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
+    </div>
+  </noscript>
+</footer>
+  <script src="/js/utils.js"></script>
+  <script src="/js/core.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var submitBtn = document.getElementById('submit-analysis-btn');
+    var fileUploaded = false;
+    var zone = document.getElementById('upload-zone');
+    var input = document.getElementById('chart-file-input');
+    var preview = document.getElementById('upload-preview');
+    var previewImg = document.getElementById('upload-preview-img');
+    var loadingEl = document.getElementById('chart-loading');
+    var marketSel = document.getElementById('chart-market');
+    var timeframeSel = document.getElementById('chart-timeframe');
+    var objectiveSel = document.getElementById('chart-objective');
+
+    function checkFormComplete() {
+      if (fileUploaded && marketSel.value && timeframeSel.value && objectiveSel.value) {
+        submitBtn.style.opacity = '1';
+        submitBtn.style.pointerEvents = 'auto';
+      }
+    }
+
+    if (marketSel) marketSel.addEventListener('change', checkFormComplete);
+    if (timeframeSel) timeframeSel.addEventListener('change', checkFormComplete);
+    if (objectiveSel) objectiveSel.addEventListener('change', checkFormComplete);
+
+    if (zone && input) {
+      zone.addEventListener('click', () => input.click());
+      zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('drag-over'); });
+      zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        handleFile(e.dataTransfer.files[0]);
+      });
+      input.addEventListener('change', () => { if (input.files[0]) handleFile(input.files[0]); });
+    }
+
+    function handleFile(file) {
+      if (!file) return;
+      if (!['image/png','image/jpeg','image/jpg','image/webp'].includes(file.type)) {
+        alert('Please upload a PNG, JPG, JPEG or WEBP file.');
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) { alert('File size must be under 10 MB.'); return; }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        // Validate image dimensions — charts are typically landscape
+        var tempImg = new Image();
+        tempImg.onload = function() {
+          var w = tempImg.width, h = tempImg.height;
+          if (w < 400 || h < 200) {
+            alert('This image appears too small for chart analysis. Please upload a clear chart screenshot (minimum 400×200 pixels).');
+            return;
+          }
+          if (h > w * 1.5) {
+            alert('This image appears to be portrait orientation. Trading charts are typically landscape. Please upload a proper chart screenshot.');
+            return;
+          }
+          previewImg.src = e.target.result;
+          preview.classList.add('visible');
+          fileUploaded = true;
+          checkFormComplete();
+        };
+        tempImg.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+      if (loadingEl) loadingEl.style.display = 'flex';
+      setTimeout(() => { if (loadingEl) loadingEl.style.display = 'none'; }, 1500);
+    }
+  });
+  </script>
+</body>
+</html>

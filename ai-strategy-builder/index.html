@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Strategy Builder | Create Rules Without Code | Trader AI</title>
+  <meta name="description" content="Turn trading ideas into structured rules without coding. Describe entries, exits and risk limits in plain English. Test your strategy with backtesting.">
+  <link rel="canonical" href="https://traderai.com/ai-strategy-builder/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Trading Strategy Builder | Create Rules Without Code">
+  <meta property="og:description" content="Use everyday language to define market conditions, entries, exits and risk limits without writing code.">
+  <meta property="og:url" content="https://traderai.com/ai-strategy-builder/">
+  <meta property="og:image" content="https://traderai.com/assets/images/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Trading Strategy Builder | Create Rules Without Code">
+  <meta name="twitter:description" content="Use everyday language to define market conditions, entries, exits and risk limits without writing code.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Strategy Builder","applicationCategory":"Trading Application","operatingSystem":"Web","description":"Turn trading ideas into structured, testable rules without writing code.","url":"https://traderai.com/ai-strategy-builder/"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://traderai.com/"},{"@type":"ListItem","position":2,"name":"AI Strategy Builder","item":"https://traderai.com/ai-strategy-builder/"}]}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to know how to code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Strategy Builder is designed for traders who want to formalise their ideas without writing code. You describe your strategy in plain English, and the AI structures it into rules. You can edit and refine the output before testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my strategy has missing rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The builder identifies gaps in your strategy — such as missing stop-loss levels, undefined exit conditions, or absent risk limits — and flags them with validation warnings. You can then add the missing rules before testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I backtest the strategy immediately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once your strategy rules are generated, you can move directly to the Backtesting tool to test them against historical market data. The strategy rules carry over into the backtesting configuration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What markets and indicators are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The builder supports forex, indices, commodities, crypto, stocks and ETFs. You can reference common technical indicators including moving averages, RSI, MACD, Bollinger Bands, volume and support/resistance levels. Indicator availability may vary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the generated rules guaranteed to be profitable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Strategy Builder structures your ideas into testable rules — it does not guarantee that any strategy will be profitable. All trading involves risk. Backtested and simulated results do not guarantee future performance."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header" role="banner">
+  <noscript>
+    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
+        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
+        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
+        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
+        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
+        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
+        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
+        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
+      </nav>
+    </div>
+  </noscript>
+</header>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="hero-eyebrow">AI Strategy Builder</span>
+          <h1>Describe Your Strategy.<br>Turn It into Testable Rules.</h1>
+          <p>Use everyday language to define market conditions, entries, exits and risk limits — no code required. The AI structures your idea into clear, editable rules ready for backtesting.</p>
+          <div class="page-hero-actions">
+            <a href="#builder" class="btn btn-primary btn-lg">Build a Strategy</a>
+            <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">How It Works</span>
+          <h2>Describe. Generate. Test.</h2>
+        </div>
+        <div class="grid grid-3" style="max-width:900px;margin:0 auto;">
+          <div style="text-align:center;padding:24px 16px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.25rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">1</div>
+            <h4>Describe Your Strategy</h4>
+            <p style="font-size:0.875rem;color:var(--muted);">Write your trading idea in plain English. Include the market, entry conditions, exit rules and any risk limits you want to apply.</p>
+          </div>
+          <div style="text-align:center;padding:24px 16px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.25rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">2</div>
+            <h4>Review Structured Rules</h4>
+            <p style="font-size:0.875rem;color:var(--muted);">The AI converts your description into organised rules with identified gaps. Edit and refine until the strategy matches your intent.</p>
+          </div>
+          <div style="text-align:center;padding:24px 16px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.25rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">3</div>
+            <h4>Test and Validate</h4>
+            <p style="font-size:0.875rem;color:var(--muted);">Run a backtest against historical data or practise in a paper trading account to see how your strategy behaves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGY BUILDER DEMO -->
+    <section class="section bg-off-white" id="builder">
+      <div class="container" style="max-width:720px;">
+        <div class="section-header">
+          <span class="section-eyebrow">Strategy Builder</span>
+          <h2>See How It Works</h2>
+          <p>Below is a sample strategy description and the structured output the AI generates. Try editing the description to see what changes.</p>
+        </div>
+
+        <div class="strategy-input-wrap">
+          <textarea id="strategy-textarea" placeholder="Describe your strategy in plain language..." style="min-height:100px;">Monitor EUR/USD on the one-hour timeframe. Consider an entry when price is above the 200-period moving average and RSI crosses above 50. Close the position if RSI falls below 45.</textarea>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;">
+          <button class="btn btn-primary" id="strategy-generate-btn">Generate Rules</button>
+          <button class="btn btn-secondary" id="strategy-clear-btn">Clear</button>
+        </div>
+
+        <div class="loading-spinner" id="strategy-loading" style="display:none;">Analysing your strategy description...</div>
+
+        <div class="strategy-output" id="strategy-output">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <h4 style="margin:0;">Generated Strategy Rules</h4>
+            <span class="badge badge-illustrative">Sample Output</span>
+          </div>
+          <div class="strategy-field"><span class="strategy-field-label">Market</span><span class="strategy-field-value">Forex</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Instrument</span><span class="strategy-field-value">EUR/USD</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Timeframe</span><span class="strategy-field-value">1-hour</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Entry Conditions</span><span class="strategy-field-value">Price above 200 MA AND RSI crosses above 50</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Exit Conditions</span><span class="strategy-field-value">RSI falls below 45</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Stop Logic</span><span class="strategy-field-value" style="color:var(--warning);">Not specified</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Profit Logic</span><span class="strategy-field-value" style="color:var(--warning);">Not specified</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Position Size</span><span class="strategy-field-value">Not specified — 1% default suggested</span></div>
+          <div class="strategy-field"><span class="strategy-field-label">Daily Risk Limit</span><span class="strategy-field-value">Not specified — 3% default suggested</span></div>
+
+          <div class="strategy-warning">Missing exit conditions: Consider adding a take-profit level or trailing stop.</div>
+          <div class="strategy-warning">Missing risk rules: Consider adding stop-loss, position size and daily loss limit.</div>
+        </div>
+
+        <div id="strategy-checklist" style="margin-top:24px;">
+          <div class="card">
+            <h4>Strategy Validation Checklist</h4>
+            <p style="font-size:0.875rem;color:var(--muted);margin-bottom:12px;">Review these before testing your strategy:</p>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="form-checkbox"><input type="checkbox" id="c1"><label for="c1">Market and instrument are clearly defined</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c2"><label for="c2">Entry timeframe is specified</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c3"><label for="c3">Entry conditions are specific and testable</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c4"><label for="c4">Exit conditions defined for both winning and losing trades</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c5"><label for="c5">Stop-loss and position size rules are in place</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c6"><label for="c6">Strategy bias (long, short, or both) is clear</label></div>
+              <div class="form-checkbox"><input type="checkbox" id="c7"><label for="c7">Market conditions for pausing the strategy are considered</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT STEPS -->
+    <section class="section">
+      <div class="container" style="text-align:center;max-width:600px;">
+        <span class="section-eyebrow">Next Steps</span>
+        <h2>Test and Practise Your Strategy</h2>
+        <p style="color:var(--muted);margin-bottom:24px;">Once your strategy rules are structured, run a backtest or practise in a simulated paper trading account.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+          <a href="/register/" class="btn btn-secondary btn-lg">Create Free Access</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section bg-off-white">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do I need to know how to code?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. The Strategy Builder is designed for traders who want to formalise their ideas without writing code. You describe your strategy in plain English, and the AI structures it into rules. You can edit and refine the output before testing.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What if my strategy has missing rules?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The builder identifies gaps in your strategy — such as missing stop-loss levels, undefined exit conditions, or absent risk limits — and flags them with validation warnings. You can then add the missing rules before testing.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can I backtest the strategy immediately?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Once your strategy rules are generated, you can move directly to the <a href="/backtesting/">Backtesting</a> tool to test them against historical market data. The strategy rules carry over into the backtesting configuration.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What markets and indicators are supported?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The builder supports forex, indices, commodities, crypto, stocks and ETFs. You can reference common technical indicators including moving averages, RSI, MACD, Bollinger Bands, volume and support/resistance levels. Indicator availability may vary.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Are the generated rules guaranteed to be profitable?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. The Strategy Builder structures your ideas into testable rules — it does not guarantee that any strategy will be profitable. All trading involves risk. Backtested and simulated results do not guarantee future performance.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--off-white);padding:80px 0;border-top:1px solid var(--border);">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Get Started</span>
+        <h2 style="color:var(--deep-navy);font-size:2rem;margin-bottom:12px;">Ready to Build Your First Strategy?</h2>
+        <p style="color:var(--muted);font-size:1.0625rem;max-width:550px;margin:0 auto 24px;">Turn your trading idea into structured rules and test it — all within one platform.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+  <noscript>
+    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
+      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
+      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
+    </div>
+  </noscript>
+</footer>
+  <script src="/js/utils.js"></script>
+  <script src="/js/core.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const generateBtn = document.getElementById('strategy-generate-btn');
+    const clearBtn = document.getElementById('strategy-clear-btn');
+    const textarea = document.getElementById('strategy-textarea');
+    const loadingEl = document.getElementById('strategy-loading');
+    const outputEl = document.getElementById('strategy-output');
+
+    if (generateBtn && textarea) {
+      generateBtn.addEventListener('click', () => {
+        if (!textarea.value.trim()) return;
+        if (loadingEl) loadingEl.style.display = 'flex';
+        if (outputEl) outputEl.style.display = 'none';
+        setTimeout(() => {
+          if (loadingEl) loadingEl.style.display = 'none';
+          if (outputEl) outputEl.style.display = 'block';
+        }, 800);
+      });
+    }
+
+    if (clearBtn && textarea) {
+      clearBtn.addEventListener('click', () => {
+        textarea.value = '';
+      });
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /js/
+Disallow: /css/
+Disallow: /content/
+
+Sitemap: https://traderai.com/sitemap.xml

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Methodology | Return & Drawdown | Trader AI</title>
+  <meta name="description" content="How Trader AI calculates returns, drawdown and win rate. Clear definitions of live, paper-traded, backtested and illustrative performance data.">
+  <link rel="canonical" href="https://traderai.com/performance-methodology/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Performance Methodology — How Trader AI Calculates Returns & Drawdown">
+  <meta property="og:description" content="Understand how Trader AI calculates returns, drawdown, win rate and trading costs.">
+  <meta property="og:url" content="https://traderai.com/performance-methodology/">
+  <meta property="og:image" content="https://traderai.com/assets/images/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Performance Methodology — How Trader AI Calculates Returns & Drawdown">
+  <meta name="twitter:description" content="Understand how Trader AI calculates returns, drawdown, win rate and trading costs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Performance Methodology","description":"How Trader AI calculates returns, drawdown, win rate and trading costs.","url":"https://traderai.com/performance-methodology/"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://traderai.com/"},{"@type":"ListItem","position":2,"name":"Performance Methodology","item":"https://traderai.com/performance-methodology/"}]}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why are backtested results labelled separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Backtested results are hypothetical — they show how a strategy would have performed in the past, which may not predict future performance. They are labelled separately so you never confuse historical simulation with live trading results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often is live performance data updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Update frequency depends on data provider availability and your plan. Live data is updated in real-time or near real-time where possible. Each data display includes a timestamp showing when it was last updated. Check the data status indicator on any chart or metric."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a high win rate mean a strategy is good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. A strategy with an 80% win rate can still lose money if the 20% of losing trades are very large. Always evaluate win rate alongside profit factor, average gain versus average loss, and maximum drawdown. No single metric tells the full story."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are trading costs included in performance figures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All performance calculations include estimated spreads, commissions and slippage. For live results, actual costs are reflected. For backtested and paper-traded results, costs are based on configured parameters. Cost assumptions are always visible in the backtest configuration."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header" role="banner">
+  <noscript>
+    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
+        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
+        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
+        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
+        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
+        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
+        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
+        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
+      </nav>
+    </div>
+  </noscript>
+</header>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="hero-eyebrow">Performance Methodology</span>
+          <h1>Understand the Numbers Before You Compare Them</h1>
+          <p>A clear explanation of how performance is measured, what each data category means, and the limitations you should know before evaluating any strategy.</p>
+          <div class="page-hero-actions">
+            <a href="#categories" class="btn btn-primary btn-lg">Explore Methodology</a>
+            <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA CATEGORIES -->
+    <section class="section" id="categories">
+      <div class="container" style="max-width:900px;">
+        <div class="section-header"><span class="section-eyebrow">Data Categories</span><h2>Every Result Is Clearly Labelled</h2><p>Trader AI categorises all performance data so you always know what type of result you are viewing.</p></div>
+        <div class="grid grid-2">
+          <div class="info-block"><h4>Live Performance</h4><p>Trading activity executed with real funds in live market conditions. Reflects actual spreads, commissions, slippage and market impact. Subject to all risks of real trading.</p></div>
+          <div class="info-block"><h4>Paper-Traded Performance</h4><p>Generated with simulated funds in a simulated environment. May not fully capture slippage, liquidity constraints or psychological factors. Results may differ materially from live trading.</p></div>
+          <div class="info-block"><h4>Backtested Performance</h4><p>Generated by applying trading rules to historical market data. Inherently hypothetical. May incorporate hindsight bias. Does not reflect live execution conditions or changing market regimes.</p></div>
+          <div class="info-block"><h4>Illustrative Data</h4><p>Sample data created solely to demonstrate platform features. Not real performance of any kind. Used in demos, examples and onboarding materials. Should not be interpreted as actual results.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY METRICS EXPLAINED -->
+    <section class="section bg-off-white">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header"><span class="section-eyebrow">Metrics Explained</span><h2>How Performance Metrics Are Calculated</h2></div>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Net Return</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">Net return is calculated as the percentage change in account equity over a defined period, after deducting trading costs including spreads, commissions and fees. For backtested and paper-traded results, costs are estimated based on configured parameters. For live results, costs reflect actual execution. Returns are calculated on a time-weighted basis where multiple deposits or withdrawals occur.</p>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Maximum Drawdown</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">Maximum drawdown measures the largest peak-to-trough decline in account equity over the measurement period. It is expressed as a percentage of the peak equity value before the decline began. Drawdown is calculated on a continuous basis using closing equity values, which may not capture intra-period extremes. A large maximum drawdown relative to net return may indicate higher risk per unit of return.</p>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Win Rate</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">Win rate is the percentage of completed trades that closed with a profit, excluding breakeven trades. It is calculated as: (Winning Trades ÷ Total Completed Trades) × 100. Win rate alone does not indicate whether a strategy is profitable — a strategy with a low win rate can be profitable if average gains significantly exceed average losses. Always evaluate win rate alongside profit factor and average trade metrics.</p>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Trading Costs</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">All performance calculations include estimated trading costs: spreads (the difference between bid and ask prices), commissions (per-trade fees charged by brokers), slippage (the difference between expected and actual execution price), and overnight financing or swap fees where applicable. Cost assumptions are visible in backtest configurations. Live results reflect actual costs incurred.</p>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Profit Factor</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">Profit factor is the ratio of gross profit to gross loss across all trades. A profit factor above 1.0 indicates that total profits exceeded total losses. It is calculated as: Total Gross Profit ÷ Total Gross Loss. Higher values indicate more profit generated per unit of loss. This metric helps assess strategy robustness independent of trade frequency.</p>
+
+        <h3 style="font-size:1.25rem;margin-bottom:8px;">Strategy Changes and Data Corrections</h3>
+        <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;">Strategy parameters may be updated over time. When a strategy is modified, its historical track record prior to the change is preserved with a clear annotation. Data corrections are applied when errors are identified, with the correction date and nature of the change documented. Performance data is recalculated when underlying data is corrected.</p>
+      </div>
+    </section>
+
+    <!-- FREQUENCY & LIMITS -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header"><span class="section-eyebrow">Data Standards</span><h2>Update Frequency and Data Limitations</h2></div>
+        <div class="grid grid-2">
+          <div class="info-block"><h4>Update Frequency</h4><p>Performance data is refreshed based on the data category. Live data updates in real-time or near real-time where supported by data providers. Backtested and paper-traded metrics update when a new simulation is run. Illustrative data is static unless updated for demonstration purposes. Update timestamps are displayed wherever data is shown.</p></div>
+          <div class="info-block"><h4>Missing Data</h4><p>Periods where market data is unavailable are excluded from performance calculations and clearly noted. Strategies with insufficient data for statistical significance are flagged. Metrics based on fewer than 30 trades should be interpreted with caution as sample sizes may not be statistically meaningful.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section bg-off-white">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header"><h2>Performance Methodology FAQs</h2></div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Why are backtested results labelled separately?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Backtested results are hypothetical — they show how a strategy would have performed in the past, which may not predict future performance. They are labelled separately so you never confuse historical simulation with live trading results.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How often is live performance data updated?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Update frequency depends on data provider availability and your plan. Live data is updated in real-time or near real-time where possible. Each data display includes a timestamp showing when it was last updated. Check the data status indicator on any chart or metric.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Does a high win rate mean a strategy is good?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Not necessarily. A strategy with an 80% win rate can still lose money if the 20% of losing trades are very large. Always evaluate win rate alongside profit factor, average gain versus average loss, and maximum drawdown. No single metric tells the full story.</p></div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Are trading costs included in performance figures?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. All performance calculations include estimated spreads, commissions and slippage. For live results, actual costs are reflected. For backtested and paper-traded results, costs are based on configured parameters. Cost assumptions are always visible in the backtest configuration.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--off-white);padding:80px 0;border-top:1px solid var(--border);">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Next Step</span>
+        <h2 style="color:var(--deep-navy);font-size:2rem;margin-bottom:12px;">See Performance Methodology in Action</h2>
+        <p style="color:var(--muted);font-size:1.0625rem;max-width:550px;margin:0 auto 24px;">Apply these standards to real strategy comparisons on the AI Trader Leaderboard.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+          <a href="/register/" class="btn btn-secondary btn-lg">Create Free Access</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+  <noscript>
+    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
+      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
+      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
+    </div>
+  </noscript>
+</footer>
+  <script src="/js/utils.js"></script>
+  <script src="/js/core.js"></script>
+</body>
+</html>

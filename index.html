@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trader AI | AI Market Analysis & Strategy Testing</title>
+  <meta name="description" content="Analyse markets, explore AI-generated insights, build strategies, run backtests and practise with paper trading through the Trader AI platformm">
+  <link rel="canonical" href="https://traderai.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trader AI | AI Market Analysis & Strategy Testing">
+  <meta property="og:description" content="Analyse markets, explore AI-generated insights, build strategies, run backtests and practise with paper trading.">
+  <meta property="og:url" content="https://traderai.com/">
+  <meta property="og:image" content="https://traderai.com/assets/images/og-home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trader AI | AI Market Analysis & Strategy Testing">
+  <meta name="twitter:description" content="Analyse markets, explore AI-generated insights, build strategies, run backtests and practise with paper trading.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/css/main.css?v=5" as="style">
+  <link rel="stylesheet" href="/css/main.css?v=5" media="print" onload="this.media='all';this.onload=null;">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* === CRITICAL ABOVE-THE-FOLD CSS — Instant render, no FOUC === */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--deep-navy:#0D1A2B;--white:#fff;--border:#E2E4E8;--blue:#2563EB;--muted:#6B7280;--muted-dark:#4B5563;--nav-height:64px;--max-width:1360px;--space:16px;--space-md:24px;--space-lg:32px;--space-xl:48px;--space-2xl:64px;--space-3xl:96px;--radius:8px;--radius-md:12px;--radius-lg:16px;--terminal-bg:#091C31;--terminal-accent:#3B82F6}
+    html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+    body{font-family:"Manrope","Inter",Arial,sans-serif;font-size:1rem;line-height:1.65;color:var(--deep-navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--space-md)}
+    h1,h2,h3{font-weight:700;line-height:1.2;color:var(--deep-navy)}
+    h1{font-size:clamp(2rem,4.5vw,3.75rem);letter-spacing:-0.025em}
+    h2{font-size:clamp(1.5rem,3vw,2.5rem)}
+    p{margin-bottom:1rem;color:var(--muted-dark)}
+    a{color:var(--blue);text-decoration:none}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:100;height:var(--nav-height)}
+    .home .site-header{background:var(--deep-navy);border-bottom:1px solid rgba(255,255,255,0.08)}
+    .site-header .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+    .header-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.25rem;color:var(--deep-navy)}
+    .home .header-logo{color:var(--white)}
+    .header-logo-icon{width:36px;height:36px;background:var(--deep-navy);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.875rem}
+    .home .header-logo-icon{background:var(--blue)}
+    .main-nav{display:flex;align-items:center;gap:4px}
+    .main-nav a,.main-nav button{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;font-size:.875rem;font-weight:500;color:var(--muted-dark);border-radius:6px;transition:all .15s ease;white-space:nowrap;background:none;border:none;cursor:pointer;font-family:inherit}
+    .home .main-nav a,.home .main-nav button{color:rgba(255,255,255,0.80)}
+    .header-actions{display:flex;align-items:center;gap:8px}
+    .btn-signin{padding:8px 18px;font-size:.875rem;font-weight:600;color:var(--deep-navy);background:none;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-family:inherit}
+    .home .btn-signin{color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.2)}
+    .btn-primary-sm{padding:8px 18px;font-size:.875rem;font-weight:700;color:#fff;background:var(--deep-navy);border:none;border-radius:6px;cursor:pointer;font-family:inherit}
+    .home .btn-primary-sm{background:var(--white);color:var(--deep-navy)}
+    .mobile-nav-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+    .mobile-nav-toggle span,.mobile-nav-toggle span::before,.mobile-nav-toggle span::after{display:block;width:22px;height:2px;background:var(--deep-navy);border-radius:1px;position:relative}.mobile-nav-toggle span::before{content:"";top:-7px;position:absolute}.mobile-nav-toggle span::after{content:"";top:7px;position:absolute}
+    .home .mobile-nav-toggle span,.home .mobile-nav-toggle span::before,.home .mobile-nav-toggle span::after{background:var(--white)}
+    /* Hero */
+    .hero-home{background:var(--deep-navy);padding:calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-3xl);position:relative;overflow:hidden}
+    .hero-home-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center}
+    .hero-home-content{max-width:560px}
+    .hero-eyebrow{display:inline-block;font-size:.6875rem;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,0.55);text-transform:uppercase;margin-bottom:var(--space-md)}
+    .hero-headline-xl{font-size:clamp(2.75rem,5vw,4.5rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;color:#fff;margin-bottom:var(--space-md)}
+    .hero-body-lg{font-size:1.125rem;color:rgba(255,255,255,0.55);line-height:1.7;max-width:480px;margin-bottom:var(--space-lg)}
+    .hero-home-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .hero-trust-microcopy{font-size:.75rem;color:rgba(255,255,255,0.35);margin-top:var(--space)}
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-size:1rem;font-weight:600;border-radius:var(--radius);border:none;cursor:pointer;font-family:inherit;text-decoration:none;white-space:nowrap;transition:all .15s ease}
+    .btn-primary{background:var(--blue);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(37,99,235,0.35)}.btn-primary:hover{background:#1D4ED8;transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.45)}
+    .btn-light{background:#fff;color:var(--deep-navy);border:2px solid #fff;font-weight:700}.btn-light:hover{background:rgba(255,255,255,0.9);transform:translateY(-1px);box-shadow:0 4px 14px rgba(255,255,255,0.25)}
+    .btn-lg{padding:18px 36px;font-size:1.0625rem}
+    /* Ticker */
+    .market-ticker-wrap{background:var(--white);border-bottom:1px solid var(--border);overflow:hidden;height:44px;position:relative}
+    /* Grid */
+    .grid{display:grid;gap:var(--space-md)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
+    /* Section */
+    .section{padding:var(--space-3xl) 0}.section-sm{padding:var(--space-2xl) 0}.section-lg{padding:120px 0}
+    .bg-off-white{background:#F8F9FB}
+    .section-header{text-align:center;max-width:680px;margin:0 auto var(--space-xl)}
+    .section-eyebrow{display:inline-block;font-size:.6875rem;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:8px}
+    /* Nav dropdown */
+    .nav-dropdown{position:relative}.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:0 10px 15px rgba(0,0,0,0.06);padding:8px;min-width:240px;z-index:101}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block}
+    .nav-dropdown-menu a{display:flex;padding:10px 14px;border-radius:6px;font-size:.875rem;color:var(--muted-dark)}
+    .nav-dropdown-menu a:hover{background:#F8F9FB}
+    .dropdown-label{display:block;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:8px 14px 4px}
+    /* Mobile */
+    @media(max-width:1024px){.hero-home-grid{grid-template-columns:1fr}.hero-home-content{text-align:center;max-width:100%;margin:0 auto}.hero-home-actions{justify-content:center}.main-nav{display:none}.mobile-nav-toggle{display:flex}}
+    @media(max-width:640px){.hero-home{padding:calc(var(--nav-height) + 32px) 0 48px}.hero-headline-xl{font-size:2.25rem}.hero-body-lg{font-size:1rem}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Trader AI","url":"https://traderai.com","description":"AI-assisted market research, chart analysis, strategy testing and risk tools for traders."},{"@type":"WebSite","name":"Trader AI","url":"https://traderai.com"},{"@type":"SoftwareApplication","name":"Trader AI","applicationCategory":"FinanceApplication","operatingSystem":"Web","description":"AI-assisted market research, chart analysis, strategy testing and risk tools for traders.","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}]}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Trader AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trader AI is an AI-assisted market research and strategy testing platformm It provides tools for chart analysis, strategy building, backtesting, paper trading, and risk management. It does not execute trades, manage money, or provide regulated financial advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Trader AI work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You start by choosing a market and asking a question or uploading a chart. The AI provides structured observations about trends, price zones, and risk. You can then build strategy rules, backtest them against historical data, and practise in a paper trading account — all within one connected platform"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Trader AI guarantee profits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trading and investing always involve risk. AI-generated analysis can be incorrect, incomplete, or outdated. Trader AI does not guarantee profits, predict market movements, or provide risk-free trading. All trading decisions remain your own responsibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Trader AI suitable for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trader AI provides educational risk tools and paper trading that may help beginners learn about markets in a simulated environment. However, trading carries real financial risk, and beginners should fully understand those risks before using real funds. Trader AI does not provide financial advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Trader AI use live market data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We aim to use live or appropriately delayed market data where available. All data is clearly labelled as live, delayed, or illustrative. Check the data status indicator on any chart or analysis to understand what you are viewing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is paper trading?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paper trading is a simulated trading environment that uses virtual funds and market data to mimic real trading. It allows you to practise your process without risking real capital. Paper trading does not fully reproduce live execution conditions, including liquidity, slippage, and emotional factors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are leaderboard results real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AI Trader Leaderboard currently displays illustrative simulations designed to demonstrate how strategies compare across risk and return dimensions. These are not live trading results. Every profile is clearly labelled with its data status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Trader AI execute trades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trader AI does not execute trades, manage funds, or place orders on your behalf. It is a research and analysis platformm only. You must use your own brokerage account for any actual trading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Trader AI financial advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Trader AI does not provide personalised financial advice, investment recommendations, or regulated advisory services. The platformm provides information and tools to support your own research. You remain fully responsible for your trading decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is user data handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use industry-standard encryption and access controls to protect your data. We do not sell your personal information. For full details, see our Privacy Policy and the Trust Centre."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="home">
+  <!-- ============================================ -->
+  <!-- 1. HEADER (rendered by core.js)              -->
+  <!-- ============================================ -->
+  <header class="site-header" id="site-header" role="banner" style="background:var(--deep-navy);border-bottom:1px solid rgba(255,255,255,0.08);">
+  <noscript>
+    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/ai-trading-platformm/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
+        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
+        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
+        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
+        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
+        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
+        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
+        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
+      </nav>
+    </div>
+  </noscript>
+</header>
+
+  <main id="main-content">
+
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+    <!-- 2. DARK HERO — Trading Terminal              -->
+    <!-- ============================================ -->
+    <section class="hero-home bg-terminal">
+      <div class="container">
+        <div class="hero-home-grid">
+          <!-- LEFT: Content -->
+          <div class="hero-home-content">
+            <span class="hero-eyebrow">AI Market Intelligence</span>
+            <h1 class="hero-headline-xl">Analyse Markets.<br>Test Strategies.<br>Trade with More <span style="color:var(--terminal-accent);">Clarity.</span></h1>
+            <p class="hero-body-lg">Trader AI combines live market intelligence, AI-assisted research, strategy testing and risk controls inside one connected trading workspace.</p>
+            <div class="hero-home-actions">
+              <a href="/register/" class="btn btn-primary btn-lg btn-shine">Create Free Access</a>
+              <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
+            </div>
+            <p class="hero-trust-microcopy" style="margin-top:var(--space);">No guaranteed returns. Trading involves risk. AI-generated analysis can be incorrect.</p>
+          </div>
+          <!-- RIGHT: Trading Terminal -->
+          <div class="hero-terminal">
+            <!-- Terminal Top Bar -->
+            <div class="hero-terminal-topbar">
+              <div class="ht-instrument">
+                <span class="ht-symbol">BTC/USD</span>
+                <span class="ht-price">62,450.00</span>
+                <span class="ht-change up">+2.18%</span>
+              </div>
+              <div class="ht-timeframes">
+                <button class="ht-tf">1m</button><button class="ht-tf">5m</button><button class="ht-tf">15m</button><button class="ht-tf active">1H</button><button class="ht-tf">4H</button><button class="ht-tf">1D</button>
+              </div>
+              <div class="ht-status">
+                <span class="status-dot delayed"></span> 15-min delayed
+              </div>
+            </div>
+            <!-- Terminal Body -->
+            <div class="hero-terminal-body">
+              <!-- Watchlist -->
+              <div class="ht-watchlist">
+                <div class="ht-watchlist-item active"><span class="ht-wl-symbol">BTC/USD</span><span class="ht-wl-price">62,450</span><span class="ht-wl-change up">+2.18%</span></div>
+                <div class="ht-watchlist-item"><span class="ht-wl-symbol">ETH/USD</span><span class="ht-wl-price">3,210</span><span class="ht-wl-change up">+1.45%</span></div>
+                <div class="ht-watchlist-item"><span class="ht-wl-symbol">EUR/USD</span><span class="ht-wl-price">1.0842</span><span class="ht-wl-change down">-0.15%</span></div>
+                <div class="ht-watchlist-item"><span class="ht-wl-symbol">GBP/USD</span><span class="ht-wl-price">1.2638</span><span class="ht-wl-change up">+0.08%</span></div>
+                <div class="ht-watchlist-item"><span class="ht-wl-symbol">XAU/USD</span><span class="ht-wl-price">2,318</span><span class="ht-wl-change down">-0.52%</span></div>
+              </div>
+              <!-- Chart Area -->
+              <div class="ht-chart-area">
+                <div class="ht-chart">
+                  <svg viewBox="0 0 420 200" preserveAspectRatio="none" style="width:100%;height:100%;">
+                    <defs>
+                      <linearGradient id="htGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></linearGradient>
+                    </defs>
+                    <!-- Grid -->
+                    <line x1="0" y1="50" x2="420" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    <line x1="0" y1="100" x2="420" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="420" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    <!-- Price line -->
+                    <path d="M0,100 L20,98 L40,95 L60,90 L80,94 L100,85 L120,80 L140,75 L160,72 L180,68 L200,62 L220,65 L240,58 L260,55 L280,50 L300,52 L320,48 L340,45 L360,42 L380,44 L400,38 L420,35" stroke="#3B82F6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M0,100 L20,98 L40,95 L60,90 L80,94 L100,85 L120,80 L140,75 L160,72 L180,68 L200,62 L220,65 L240,58 L260,55 L280,50 L300,52 L320,48 L340,45 L360,42 L380,44 L400,38 L420,35 L420,200 L0,200Z" fill="url(#htGrad)"/>
+                    <line x1="0" y1="65" x2="420" y2="65" stroke="rgba(34,197,94,0.3)" stroke-width="1" stroke-dasharray="4,3"/><text x="415" y="63" fill="rgba(34,197,94,0.5)" font-size="8" text-anchor="end">R1</text>
+                    <line x1="0" y1="120" x2="420" y2="120" stroke="rgba(239,68,68,0.3)" stroke-width="1" stroke-dasharray="4,3"/><text x="415" y="118" fill="rgba(239,68,68,0.5)" font-size="8" text-anchor="end">S1</text>
+                  </svg>
+                </div>
+                <!-- AI Panel + Risk side by side below chart -->
+                <div class="ht-bottom-panels">
+                  <div class="ht-ai-mini">
+                    <div class="ht-ai-mini-row"><span>Trend</span><span style="color:#22C55E;">▲ Bullish</span></div>
+                    <div class="ht-ai-mini-row"><span>Key Zone</span><span>Support 60,800</span></div>
+                    <div class="ht-ai-mini-row"><span>Invalidation</span><span style="color:#EF4444;">Below 60,200</span></div>
+                    <div class="ht-ai-mini-row"><span>Risk</span><span>Active</span></div>
+                    <div class="ht-ai-mini-row"><span>Updated</span><span>10:00 UTC</span></div>
+                  </div>
+                  <div class="ht-risk-mini">
+                    <div class="ht-risk-row"><span>Risk/Trade</span><div class="ht-risk-track-sm"><div class="ht-risk-fill-sm low" style="width:33%;"></div></div><span>1.0%</span></div>
+                    <div class="ht-risk-row"><span>Exposure</span><div class="ht-risk-track-sm"><div class="ht-risk-fill-sm low" style="width:25%;"></div></div><span>15%</span></div>
+                    <div class="ht-risk-row"><span>Daily Loss</span><div class="ht-risk-track-sm"><div class="ht-risk-fill-sm mid" style="width:40%;"></div></div><span>1.2%</span></div>
+                    <div class="ht-risk-row"><span>Remaining</span><div class="ht-risk-track-sm"><div class="ht-risk-fill-sm low" style="width:60%;"></div></div><span>60%</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-terminal-footer">
+              <span>Illustrative terminal — not live trading data</span>
+              <span>BTC/USD · 1H · Updated 10:00 UTC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. LIVE MARKET TICKER                        -->
+    <!-- ============================================ -->
+    <!-- Ticker -->
+    <div class="market-ticker-wrap" id="market-ticker-wrap">
+      <div class="market-ticker" id="market-ticker"></div>
+    </div>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip-v2">
+      <div class="container">
+        <div class="trust-strip-v2-grid">
+          <div class="trust-strip-v2-item">
+            <span class="ts-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </span>
+            <div>
+              <span class="ts-label">Transparent Data</span>
+              <span class="ts-sub">Live or delayed — always labelled</span>
+            </div>
+          </div>
+          <div class="trust-strip-v2-item">
+            <span class="ts-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </span>
+            <div>
+              <span class="ts-label">Paper Trading</span>
+              <span class="ts-sub">Practice without real funds</span>
+            </div>
+          </div>
+          <div class="trust-strip-v2-item">
+            <span class="ts-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </span>
+            <div>
+              <span class="ts-label">Verified Labels</span>
+              <span class="ts-sub">Backtests clearly identified</span>
+            </div>
+          </div>
+          <div class="trust-strip-v2-item">
+            <span class="ts-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <div>
+              <span class="ts-label">Risk Controls</span>
+              <span class="ts-sub">Configurable before every trade</span>
+            </div>
+          </div>
+          <div class="trust-strip-v2-item">
+            <span class="ts-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 8v4M12 16h.01"/></svg>
+            </span>
+            <div>
+              <span class="ts-label">No Guarantees</span>
+              <span class="ts-sub">Trading involves real risk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+    <!-- 5. PLATFORM OVERVIEW — Clean Tool Rows       -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal reveal-delay-1" id="platformm-overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Trader AI Platform</span>
+          <h2>AI-Powered Tools for Every Stage of Your Trading Research</h2>
+          <p>From market questions to strategy testing, each tool is designed for a specific part of your workflow. Use one or connect them all.</p>
+        </div>
+        <div class="tool-list">
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/ai-trading-assistant/">AI Trading Assistant</a></h3>
+              <p>Ask questions about market structure, trends and indicators. Receive structured research with supporting context, alternative scenarios, and clear risk warnings — designed for traders who want deeper market understanding before making decisions.</p>
+              <a href="/ai-trading-assistant/" class="tool-cta">Explore the AI Trading Assistant →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/tools/ai-chart-analyser/">AI Chart Analyser</a></h3>
+              <p>Upload a chart screenshot and receive an organised breakdown of visible trends, key price zones, momentum conditions, bullish and bearish scenarios, and invalidation levels. Built for traders who want a structured second opinion on their chart analysis.</p>
+              <a href="/tools/ai-chart-analyser/" class="tool-cta">Try the AI Chart Analyser →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/ai-strategy-builder/">AI Strategy Builder</a></h3>
+              <p>Describe your trading idea in plain English and turn it into structured, testable rules — including entry conditions, exit logic, position sizing and risk limits. No coding required. For traders who want to formalise their approach before risking capital.</p>
+              <a href="/ai-strategy-builder/" class="tool-cta">Build Your Strategy →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/backtesting/">Strategy Backtesting</a></h3>
+              <p>Test your trading rules against historical market data. Review net returns, maximum drawdown, win rate, profit factor and equity curves — with visible assumptions about fees, spreads and slippage. For traders who want to understand how a strategy performed in past conditions before using it live.</p>
+              <a href="/backtesting/" class="tool-cta">Run a Backtest →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/paper-trading/">Paper Trading</a></h3>
+              <p>Practise your trading process in a simulated environment with virtual funds. Track positions, monitor P/L, manage risk and keep a trade journal — all without risking real capital. For traders who want to build confidence in their process before going live.</p>
+              <a href="/paper-trading/" class="tool-cta">Start Paper Trading →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/ai-trading-signals/">AI Trading Signals</a></h3>
+              <p>Review structured market scenarios with defined entry areas, invalidation levels, potential targets, risk context and confidence ratings. Every signal includes its data source, generated timestamp and current status. For traders who want contextual research ideas — not blind alerts.</p>
+              <a href="/ai-trading-signals/" class="tool-cta">View AI Trading Signals →</a>
+            </div>
+          </div>
+          <div class="tool-row">
+            <div class="tool-text">
+              <h3><a href="/risk-management/">Risk Management Tools</a></h3>
+              <p>Configure position-size limits, daily loss caps, maximum exposure thresholds and strategy pause conditions. Monitor concentration risk, drawdown, and remaining limits. For traders who want to define their risk parameters before entering any trade.</p>
+              <a href="/risk-management/" class="tool-cta">Configure Risk Controls →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 6. AI TRADING ASSISTANT (split layout)       -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal reveal-delay-2" id="assistant">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-content">
+            <span class="section-eyebrow">AI Trading Assistant</span>
+            <h2>Ask Better <span class="text-gradient">Market Questions</span></h2>
+            <p>Explore market structure, indicators, strategies and risk through an AI-assisted research conversation. Ask a question, review the structured response, and decide what to explore next.</p>
+            <div class="example-chips">
+              <span class="example-chip">Analyse BTC/USD market structure</span>
+              <span class="example-chip">Explain the current trend</span>
+              <span class="example-chip">Identify important price zones</span>
+              <span class="example-chip">Review the risks in this strategy</span>
+              <span class="example-chip">Compare momentum strategies</span>
+            </div>
+            <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          </div>
+          <div class="split-visual">
+            <div class="chat-preview-compact">
+              <div class="chat-bubble-compact user">What is the 4H structure on EUR/USD?</div>
+              <div class="chat-bubble-compact ai">
+                <strong>Direct Summary</strong>
+                The available data suggests a developing bullish structure on the 4-hour timeframe. Price is trading above the 50 and 200-period moving averages.<br><br>
+                <strong>Supporting Context</strong>
+                RSI at 58 indicates room for continuation before reaching overbought conditions. Higher lows have been forming since mid-July.<br><br>
+                <strong>Alternative Scenario</strong>
+                One possible scenario is a rejection at 1.0920 resistance, which could lead to a range-bound period between 1.0780 and 1.0920.<br><br>
+                <strong>Key Risks</strong>
+                This interpretation may be weakened if price breaks below 1.0780. Upcoming US economic releases may increase volatility.<br><br>
+                <strong>Limitations</strong>
+                This is AI-generated analysis based on visible chart data. It is not a prediction or trading recommendation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 7. AI CHART ANALYSER — Left/Right Split     -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="chart-analyser">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI Chart Analyser</span>
+          <h2>Upload a Chart. Get a Structured AI Analysis.</h2>
+          <p>Upload a clear chart screenshot and receive an organised review of visible trends, price zones, momentum and possible market scenarios.</p>
+        </div>
+        <div class="chart-split">
+          <div class="chart-split-left">
+            <h3 style="font-size:1.5rem;margin-bottom:12px;">How It Works</h3>
+            <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:16px;">Upload any trading chart — from TradingView, MetaTrader, your broker platformm or a simple screenshot. The AI identifies visible patterns, price zones, trend direction and momentum conditions.</p>
+            <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:16px;">You receive a structured analysis covering bullish and bearish scenarios, key support and resistance levels, invalidation points, and risk considerations — not predictions, but observations based on what is visible in the chart.</p>
+            <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:16px;">Every analysis includes a confidence rating and a clear statement of limitations. AI-generated chart analysis can be incorrect or incomplete. Always conduct your own research.</p>
+            <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          </div>
+          <div class="chart-split-right">
+            <div class="chart-analysis-output">
+              <div class="analysis-row"><span class="analysis-row-label">Detected Trend</span><span class="analysis-row-value bullish">▲ Bullish Structure</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Key Support</span><span class="analysis-row-value">1.0780</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Key Resistance</span><span class="analysis-row-value">1.0920</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Bullish Scenario</span><span class="analysis-row-value">Break above 1.0920 targets 1.1050</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Bearish Scenario</span><span class="analysis-row-value bearish">Break below 1.0780 exposes 1.0700</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Invalidation</span><span class="analysis-row-value">Below 1.0740</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Risk Considerations</span><span class="analysis-row-value">Upcoming economic data may impact</span></div>
+              <div class="analysis-row"><span class="analysis-row-label">Analysis Confidence</span><span class="analysis-row-value">Moderate — based on visible data only</span></div>
+            </div>
+            <p class="limitation-text">Chart analysis is based only on visible information and can be incomplete or incorrect. This is a sample output for demonstration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 8. AI STRATEGY BUILDER                       -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal" id="strategy-builder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI Strategy Builder</span>
+          <h2>Describe Your Strategy in Plain English</h2>
+          <p>Turn a trading idea into structured, editable rules without writing code.</p>
+        </div>
+        <div style="max-width:720px;margin:0 auto;">
+          <textarea class="strategy-input" readonly>Monitor EUR/USD on the one-hour timeframe. Consider an entry when price is above the 200-period moving average and RSI crosses above 50. Close the position if RSI falls below 45.</textarea>
+          <div class="strategy-rules-output">
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Market</div><div class="strategy-rule-value">Forex — EUR/USD</div></div>
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Timeframe</div><div class="strategy-rule-value">1 Hour</div></div>
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Entry Conditions</div><div class="strategy-rule-value">Price > 200 MA + RSI > 50</div></div>
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Exit Conditions</div><div class="strategy-rule-value">RSI < 45</div></div>
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Stop Logic</div><div class="strategy-rule-value">Not specified</div></div>
+            <div class="strategy-rule-item"><div class="strategy-rule-label">Daily Risk Limit</div><div class="strategy-rule-value">Not specified</div></div>
+          </div>
+          <div class="strategy-validation-warning">⚠ Missing exit rules — consider adding stop-loss and take-profit conditions.</div>
+          <div class="strategy-validation-warning">⚠ Missing risk rules — specify position size and maximum daily loss.</div>
+          <p class="text-center mt-lg">
+            <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 9. HOW TRADER AI WORKS — 5 Clean Steps       -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">How It Works</span>
+          <h2>A Structured Workflow from Research to Review</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item">
+            <span class="step-num">01</span>
+            <h4>Choose a Market</h4>
+            <p>Select your market, instrument and timeframe from forex, indices, crypto, commodities or stocks.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">02</span>
+            <h4>Explore the Data</h4>
+            <p>Ask an AI research question, upload a chart for analysis, or browse AI trader profiles.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">03</span>
+            <h4>Review AI Analysis</h4>
+            <p>Examine structured observations, supporting context, alternative scenarios and identified risks.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">04</span>
+            <h4>Test the Strategy</h4>
+            <p>Run historical backtests or practise in a simulated paper-trading account with virtual funds.</p>
+          </div>
+          <div class="step-item">
+            <span class="step-num">05</span>
+            <h4>Make Your Own Decision</h4>
+            <p>Review all the information, understand the risks, and decide what action is appropriate for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+    <!-- 10. BACKTESTING — Dark Terminal              -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="backtesting" style="background:var(--terminal-bg);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" style="color:var(--terminal-accent);">Strategy Backtesting</span>
+          <h2 style="color:#fff;">Test the Rules Before You Trust the Idea</h2>
+          <p style="color:rgba(255,255,255,0.5);">Run a strategy against selected historical market conditions and review performance, risk, costs and weaknesses.</p>
+        </div>
+        <div style="max-width:1000px;margin:0 auto;">
+          <div class="terminal-panel" style="margin-bottom:16px;">
+            <div class="terminal-panel-header">
+              <span class="terminal-panel-title">EUR/USD — 1H Trend Following</span>
+              <span class="badge badge-illustrative">Illustrative backtest</span>
+            </div>
+            <div class="terminal-metrics">
+              <div class="terminal-metric"><div class="terminal-metric-value" style="color:#22C55E;">+12.4%</div><div class="terminal-metric-label">Net Return</div></div>
+              <div class="terminal-metric"><div class="terminal-metric-value" style="color:#EF4444;">-7.2%</div><div class="terminal-metric-label">Max Drawdown</div></div>
+              <div class="terminal-metric"><div class="terminal-metric-value">54.8%</div><div class="terminal-metric-label">Win Rate</div></div>
+              <div class="terminal-metric"><div class="terminal-metric-value">1.54</div><div class="terminal-metric-label">Profit Factor</div></div>
+            </div>
+            <!-- Equity curve placeholder -->
+            <div style="height:160px;background:rgba(0,0,0,0.2);border-radius:6px;margin-top:12px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+              <svg viewBox="0 0 600 160" preserveAspectRatio="none" style="width:100%;height:100%;">
+                <defs><linearGradient id="btGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#22C55E" stop-opacity="0.15"/><stop offset="100%" stop-color="#22C55E" stop-opacity="0"/></linearGradient></defs>
+                <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                <path d="M0,100 L20,105 L40,95 L60,108 L80,90 L100,102 L120,85 L140,95 L160,80 L180,92 L200,75 L220,88 L240,70 L260,85 L280,68 L300,82 L320,65 L340,78 L360,60 L380,72 L400,55 L420,65 L440,48 L460,58 L480,42 L500,52 L520,44 L540,50 L560,38 L580,45 L600,35" stroke="#22C55E" stroke-width="2" fill="none"/>
+                <path d="M0,100 L20,105 L40,95 L60,108 L80,90 L100,102 L120,85 L140,95 L160,80 L180,92 L200,75 L220,88 L240,70 L260,85 L280,68 L300,82 L320,65 L340,78 L360,60 L380,72 L400,55 L420,65 L440,48 L460,58 L480,42 L500,52 L520,44 L540,50 L560,38 L580,45 L600,35 L600,160 L0,160Z" fill="url(#btGrad)"/>
+              </svg>
+              <span style="position:absolute;top:10px;left:14px;font-size:10px;color:rgba(255,255,255,0.3);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Equity Curve</span>
+            </div>
+            <!-- Trade detail row -->
+            <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:2px;margin-top:2px;">
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Trades: <strong style="color:rgba(255,255,255,0.6);">342</strong></div>
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Avg Gain: <strong style="color:#22C55E;">+1.15%</strong></div>
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Avg Loss: <strong style="color:#EF4444;">-0.89%</strong></div>
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Exposure: <strong style="color:rgba(255,255,255,0.6);">32%</strong></div>
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Fees: <strong style="color:rgba(255,255,255,0.6);">0.1%</strong></div>
+              <div style="padding:8px;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;">Period: <strong style="color:rgba(255,255,255,0.6);">Jan–Dec 2025</strong></div>
+            </div>
+          </div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.25);text-align:center;">Historical and backtested results do not guarantee future performance. Illustrative data.</p>
+        </div>
+        <p class="text-center mt-lg"><a href="/register/" class="btn btn-primary">Create Free Access</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 11. PAPER TRADING                            -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="paper-trading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Paper Trading</span>
+          <h2>Practise the Process Before Using Live Funds</h2>
+          <p>Explore the Trader AI workflow through a simulated trading account using virtual funds. Build confidence in your process without risking capital.</p>
+        </div>
+        <div style="max-width:800px;margin:0 auto;">
+          <div class="simulated-badge">Simulated funds — not live trading</div>
+          <div class="paper-account-grid">
+            <div class="paper-account-card"><span class="value">£10,000.00</span><span class="label">Virtual Balance</span></div>
+            <div class="paper-account-card"><span class="value">£10,342.80</span><span class="label">Simulated Equity</span></div>
+            <div class="paper-account-card"><span class="value">+£342.80</span><span class="label">Unrealised P/L</span></div>
+            <div class="paper-account-card"><span class="value">£0.00</span><span class="label">Risk Used Today</span></div>
+            <div class="paper-account-card"><span class="value">2</span><span class="label">Open Positions</span></div>
+            <div class="paper-account-card"><span class="value">5</span><span class="label">Max Positions</span></div>
+            <div class="paper-account-card"><span class="value">3</span><span class="label">Strategy Activity</span></div>
+            <div class="paper-account-card"><span class="value">12</span><span class="label">Journal Entries</span></div>
+          </div>
+          <div class="risk-disclaimer">Paper trading does not fully reproduce liquidity, execution delays, slippage or emotional decision-making. Simulated results may differ from live trading outcomes.</div>
+          <p class="text-center mt-lg">
+            <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+    <!-- 12. AI TRADER LEADERBOARD — Market Table     -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="leaderboard">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI Trader Leaderboard</span>
+          <h2>Compare AI Traders Beyond Headline Returns</h2>
+        </div>
+        <div class="leaderboard-table-wrap" style="border-radius:12px;border:1px solid var(--border);">
+          <table class="table-terminal">
+            <thead>
+              <tr><th>#</th><th>Trader</th><th>Market</th><th>Strategy</th><th>Model</th><th>Risk</th><th>Return</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="rank-badge top">1</span></td>
+                <td><strong>Trend Navigator V2</strong></td>
+                <td>Forex</td>
+                <td>Trend Following</td>
+                <td><span style="font-size:10px;color:var(--muted);">Ensemble LSTM</span></td>
+                <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;background:#ECFDF5;color:#065F46;">Balanced</span></td>
+                <td style="color:#059669;font-weight:700;">+18.42%</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge top">2</span></td>
+                <td><strong>Momentum Scout</strong></td>
+                <td>Indices</td>
+                <td>Momentum</td>
+                <td><span style="font-size:10px;color:var(--muted);">Transformer</span></td>
+                <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;background:#FFFBEB;color:#92400E;">Active</span></td>
+                <td style="color:#059669;font-weight:700;">+22.10%</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge top">3</span></td>
+                <td><strong>Mean Reversion Alpha</strong></td>
+                <td>Forex</td>
+                <td>Mean Reversion</td>
+                <td><span style="font-size:10px;color:var(--muted);">CNN-LSTM</span></td>
+                <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;background:#ECFDF5;color:#065F46;">Balanced</span></td>
+                <td style="color:#059669;font-weight:700;">+12.75%</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge top">4</span></td>
+                <td><strong>Breakout Hunter</strong></td>
+                <td>Crypto</td>
+                <td>Breakout</td>
+                <td><span style="font-size:10px;color:var(--muted);">GRU Ensemble</span></td>
+                <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;background:#FFFBEB;color:#92400E;">Active</span></td>
+                <td style="color:#059669;font-weight:700;">+31.50%</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge top">5</span></td>
+                <td><strong>Multi-Factor Select</strong></td>
+                <td>Stocks</td>
+                <td>Multi-Factor</td>
+                <td><span style="font-size:10px;color:var(--muted);">XGBoost + LSTM</span></td>
+                <td><span style="font-size:11px;padding:2px 8px;border-radius:100px;background:#ECFDF5;color:#065F46;">Balanced</span></td>
+                <td style="color:#059669;font-weight:700;">+15.88%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center mt-lg">
+          <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          <a href="/ai-traders/" class="btn btn-secondary" style="margin-left:var(--space-sm);background:var(--deep-navy);color:#fff;border-color:var(--deep-navy);">Browse AI Traders</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 13. AI TRADING SIGNALS                       -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="signals">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI Trading Signals</span>
+          <h2>Trading Signals Need Context, Not Just a Direction</h2>
+          <p>Review structured market scenarios with timestamps, invalidation levels, risk context and clear data status. Every signal includes its data source so you know what you are viewing.</p>
+        </div>
+        <div class="signals-home-grid" id="home-signals-grid"></div>
+        <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:var(--space-sm);">Illustrative signals — not live trading recommendations.</p>
+        <p class="text-center mt-lg">
+          <a href="/register/" class="btn btn-primary">Create Free Access</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 14. RISK MANAGEMENT                         -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal" id="risk">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Risk Management</span>
+          <h2>Define the Risk Before You Consider the Trade</h2>
+          <p>Configure account-level boundaries, position limits and strategy pause conditions before exploring a setup.</p>
+        </div>
+        <div style="max-width:900px;margin:0 auto;">
+          <div class="risk-gauges-grid">
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Risk per Trade</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill low" style="width:33%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: 1.0%</span><span>Limit: 3.0%</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Position Size</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill low" style="width:40%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: 2.0%</span><span>Limit: 5.0%</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Daily Loss</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill mid" style="width:40%;"></div></div>
+              <div class="risk-gauge-detail"><span>Used: 1.2%</span><span>Limit: 3.0%</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Total Exposure</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill low" style="width:30%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: 15%</span><span>Limit: 30%</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Open Positions</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill low" style="width:40%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: 2</span><span>Limit: 5</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Leverage</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill mid" style="width:60%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: 3:1</span><span>Limit: 5:1</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Strategy Drawdown</div>
+              <div class="risk-gauge-bar"><div class="risk-gauge-fill low" style="width:25%;"></div></div>
+              <div class="risk-gauge-detail"><span>Current: -4.2%</span><span>Pause at: -10%</span></div>
+            </div>
+            <div class="risk-gauge-card">
+              <div class="risk-gauge-label">Risk Alerts</div>
+              <div style="font-size:0.75rem;color:var(--muted-dark);margin-top:8px;">2 active · 0 paused strategies</div>
+            </div>
+          </div>
+          <div class="risk-profiles-row" style="justify-content:center;">
+            <button class="risk-profile-btn active">Conservative</button>
+            <button class="risk-profile-btn">Balanced</button>
+            <button class="risk-profile-btn">Active</button>
+            <button class="risk-profile-btn">Custom</button>
+          </div>
+          <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:var(--space-sm);">No risk profile is safe or suitable for every user. These are illustrative examples.</p>
+          <p class="text-center mt-lg">
+            <a href="/register/" class="btn btn-primary">Create Free Access</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 15. WHAT AI CAN AND CANNOT DO                -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="ai-transparency">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AI Transparency</span>
+          <h2>Understand What Trader AI Can — and Cannot — Do</h2>
+        </div>
+        <div class="ability-grid">
+          <div class="ability-card can">
+            <h3>✓ Trader AI Can</h3>
+            <ul>
+              <li>Analyse available market data</li>
+              <li>Explain technical indicators</li>
+              <li>Identify visible patterns</li>
+              <li>Organise strategy rules</li>
+              <li>Run historical tests</li>
+              <li>Monitor configured conditions</li>
+              <li>Highlight assumptions and risks</li>
+            </ul>
+          </div>
+          <div class="ability-card cannot">
+            <h3>— Trader AI Cannot</h3>
+            <ul>
+              <li>Guarantee profits</li>
+              <li>Predict every market movement</li>
+              <li>Remove trading risk</li>
+              <li>Guarantee signal accuracy</li>
+              <li>Replace personal judgement</li>
+              <li>Assess complete financial suitability</li>
+              <li>Provide personalised financial advice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 16. PERFORMANCE TRANSPARENCY                 -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal" id="performance">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Performance Transparency</span>
+          <h2>Know What Type of Result You Are Viewing</h2>
+        </div>
+        <div class="perf-transparency-grid">
+          <div class="perf-type-card">
+            <span class="perf-type-badge live">Live</span>
+            <h4>Live</h4>
+            <p>Connected to an active supported trading environment with real-time or delayed market data. Clearly labelled with data status and update time.</p>
+          </div>
+          <div class="perf-type-card">
+            <span class="perf-type-badge paper">Paper</span>
+            <h4>Paper Traded</h4>
+            <p>Generated in a simulated environment using market data. Results may differ from live execution due to liquidity and timing differences.</p>
+          </div>
+          <div class="perf-type-card">
+            <span class="perf-type-badge backtest">Backtest</span>
+            <h4>Backtested</h4>
+            <p>Calculated by applying strategy rules to historical data. Past results and backtests do not guarantee future outcomes.</p>
+          </div>
+          <div class="perf-type-card">
+            <span class="perf-type-badge illustrative">Sample</span>
+            <h4>Illustrative</h4>
+            <p>Sample data used only to demonstrate the interface. Not real performance. Created to show how the platformm works.</p>
+          </div>
+        </div>
+        <p class="text-center mt-lg">
+          <a href="/register/" class="btn btn-primary">Create Free Access</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 17. TRUST CENTRE PREVIEW                     -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal" id="trust">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Trust Centre</span>
+          <h2>Clear Information Before You Create an Account</h2>
+          <p>Review how Trader AI operates, how information is presented and which risks remain before using the platformm</p>
+        </div>
+        <!-- Trader Reviews — Full Width -->
+        <div style="margin-top:40px;">
+          <h3 style="text-align:center;font-size:1.25rem;margin-bottom:24px;">What Traders Say About Trader AI</h3>
+          <div class="grid grid-3" style="gap:20px;">
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"The AI Chart Analyser saved me hours of manual analysis. Uploaded a complex chart and got structured breakdown in seconds — support, resistance, invalidation, everything labelled."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">JD</div><div><strong style="font-size:0.8125rem;">James D.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">Forex Trader, London</span></div></div></div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"Backtesting my strategy before going live gave me confidence I never had. Metrics are clear and assumptions about fees and slippage are visible — no surprises."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:var(--deep-navy);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">SP</div><div><strong style="font-size:0.8125rem;">Sarah P.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">Strategy Developer, Manchester</span></div></div></div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"Paper trading helped me practise without fear of losing real money. Dashboard shows everything — P/L, risk usage, trade journal. Exactly what I needed."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:#059669;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">AK</div><div><strong style="font-size:0.8125rem;">Alex K.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">New Trader, Sydney</span></div></div></div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"As an experienced trader, I was sceptical about AI tools. But the Strategy Builder converted my ideas into testable rules faster than I could manually code them."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:#F59E0B;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">MH</div><div><strong style="font-size:0.8125rem;">Michael H.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">Day Trader, Birmingham</span></div></div></div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"The risk management dashboard is exactly what retail traders need. Position sizing, daily loss limits, exposure caps — all configurable before you place a single trade."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:#DC2626;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">EL</div><div><strong style="font-size:0.8125rem;">Emma L.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">Risk Analyst, Edinburgh</span></div></div></div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;"><p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;font-style:italic;margin-bottom:14px;">"Moved from another platformm because of the transparency here. Every data point is labelled — live, delayed, simulated. You always know what you're looking at."</p><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:#8B5CF6;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;">RT</div><div><strong style="font-size:0.8125rem;">Raj T.</strong><br><span style="font-size:0.6875rem;color:var(--muted);">Swing Trader, Melbourne</span></div></div></div>
+          </div>
+        </div>
+        <p class="text-center mt-lg">
+          <a href="/register/" class="btn btn-primary">Create Free Access</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 18. WHO TRADER AI IS FOR                     -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal" id="audience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Who It Is For</span>
+          <h2>Designed for Different Research and Trading Workflows</h2>
+        </div>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-card-icon">🌱</div>
+            <h4>Beginners</h4>
+            <p>Learn market concepts and practise through paper trading before considering real funds. Understand the risks before you start.</p>
+            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card-icon">📊</div>
+            <h4>Self-Directed Traders</h4>
+            <p>Use AI to organise research, compare scenarios and test ideas. Bring structure to your existing trading process.</p>
+            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card-icon">🛠️</div>
+            <h4>Strategy Builders</h4>
+            <p>Convert trading ideas into structured rules and historical tests. Backtest before you commit capital.</p>
+            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
+          </div>
+        </div>
+        <p class="audience-note">Trader AI may not be appropriate for users who do not understand or cannot afford the risks of trading.</p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+
+    <!-- ============================================ -->
+    <!-- 20. EDUCATIONAL RESOURCES                    -->
+    <!-- ============================================ -->
+    <section class="section-lg bg-off-white reveal" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Learn</span>
+          <h2>Build a Clearer Understanding of AI Trading</h2>
+        </div>
+        <div class="education-grid">
+          <a href="/ai-trading-platformm/" class="edu-card">
+            <h4>What Is AI Trading?</h4>
+            <p>Understand how artificial intelligence is used in market analysis, strategy testing and risk management — and what it cannot do.</p>
+            <div class="edu-card-meta"><span>5 min read</span><span>Updated Jul 2026</span></div>
+          </a>
+          <a href="/ai-trading-platformm/" class="edu-card">
+            <h4>How AI Trading Works</h4>
+            <p>A practical overview of how AI analyses charts, identifies patterns and supports trading decisions without replacing human judgement.</p>
+            <div class="edu-card-meta"><span>7 min read</span><span>Updated Jul 2026</span></div>
+          </a>
+          <a href="/ai-trading-platformm/" class="edu-card">
+            <h4>Is AI Trading Safe?</h4>
+            <p>Understand the risks, limitations and responsible use of AI in trading. AI does not eliminate risk or guarantee outcomes.</p>
+            <div class="edu-card-meta"><span>6 min read</span><span>Updated Jul 2026</span></div>
+          </a>
+          <a href="/ai-trading-platformm/" class="edu-card">
+            <h4>How to Evaluate AI Trading Signals</h4>
+            <p>Learn how to assess signal quality, understand confidence levels and use signals as one input among many in your research.</p>
+            <div class="edu-card-meta"><span>8 min read</span><span>Updated Jul 2026</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 21. FAQs                                     -->
+    <!-- ============================================ -->
+    <section class="section-lg reveal reveal-delay-3" id="faqs">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" id="home-faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq0"><span>What is Trader AI?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq0" role="region"><p>Trader AI is an AI-assisted market research and strategy testing platformm It provides tools for chart analysis, strategy building, backtesting, paper trading, and risk management. It does not execute trades, manage money, or provide regulated financial advice.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq1"><span>How does Trader AI work?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq1" role="region"><p>You start by choosing a market and asking a question or uploading a chart. The AI provides structured observations about trends, price zones, and risk. You can then build strategy rules, backtest them against historical data, and practise in a paper trading account — all within one connected platformm</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq2"><span>Does Trader AI guarantee profits?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq2" role="region"><p>No. Trading and investing always involve risk. AI-generated analysis can be incorrect, incomplete, or outdated. Trader AI does not guarantee profits, predict market movements, or provide risk-free trading. All trading decisions remain your own responsibility.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq3"><span>Is Trader AI suitable for beginners?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq3" role="region"><p>Trader AI provides educational risk tools and paper trading that may help beginners learn about markets in a simulated environment. However, trading carries real financial risk, and beginners should fully understand those risks before using real funds. Trader AI does not provide financial advice.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq4"><span>Does Trader AI use live market data?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq4" role="region"><p>We aim to use live or appropriately delayed market data where available. All data is clearly labelled as live, delayed, or illustrative. Check the data status indicator on any chart or analysis to understand what you are viewing.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq5"><span>What is paper trading?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq5" role="region"><p>Paper trading is a simulated trading environment that uses virtual funds and market data to mimic real trading. It allows you to practise your process without risking real capital. Paper trading does not fully reproduce live execution conditions, including liquidity, slippage, and emotional factors.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq6"><span>Are leaderboard results real?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq6" role="region"><p>The AI Trader Leaderboard currently displays illustrative simulations designed to demonstrate how strategies compare across risk and return dimensions. These are not live trading results. Every profile is clearly labelled with its data status.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq7"><span>Does Trader AI execute trades?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq7" role="region"><p>No. Trader AI does not execute trades, manage funds, or place orders on your behalf. It is a research and analysis platformm only. You must use your own brokerage account for any actual trading.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq8"><span>Is Trader AI financial advice?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq8" role="region"><p>No. Trader AI does not provide personalised financial advice, investment recommendations, or regulated advisory services. The platformm provides information and tools to support your own research. You remain fully responsible for your trading decisions.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq9"><span>How is user data handled?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-answer" id="faq9" role="region"><p>We use industry-standard encryption and access controls to protect your data. We do not sell your personal information. For full details, see our Privacy Policy and the <a href="/trust-centre/">Trust Centre</a>.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- 23. FOOTER (rendered by core.js)             -->
+  <!-- ============================================ -->
+  <footer class="site-footer" id="site-footer" role="contentinfo">
+  <noscript>
+    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
+      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
+      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
+    </div>
+  </noscript>
+</footer>
+
+  <script src="/js/utils.js" defer></script>
+  <script src="/content/data.js" defer></script>
+  <script src="/js/market-ticker.js" defer></script>
+  <script src="/js/core.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var C = window.TraderAIContent || {};
+
+      // === PLATFORM FEATURE TABS ===
+      document.getElementById('platformm-tabs')?.addEventListener('click', (e) => {
+        const tab = e.target.closest('.feature-tab');
+        if (!tab) return;
+        document.querySelectorAll('#platformm-tabs .feature-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.feature-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.panel)?.classList.add('active');
+      });
+
+      // === SIGNALS (top 3) ===
+      var sigGrid = document.getElementById('home-signals-grid');
+      if (sigGrid && C.signalExamples) {
+        sigGrid.innerHTML = C.signalExamples.slice(0, 3).map(s => `
+          <div class="signal-card-home">
+            <div class="signal-card-home-header">
+              <div>
+                <strong>${s.market}</strong>
+                <div style="font-size:0.6875rem;color:var(--muted);">${s.instrument} · ${s.timeframe}</div>
+              </div>
+              <span class="badge badge-illustrative">${s.status}</span>
+            </div>
+            <div class="signal-card-home-grid">
+              <div class="signal-card-home-item"><label>Scenario</label><span>${s.scenario}</span></div>
+              <div class="signal-card-home-item"><label>Entry</label><span>${s.entry}</span></div>
+              <div class="signal-card-home-item"><label>Target</label><span>${s.target}</span></div>
+              <div class="signal-card-home-item"><label>Invalidation</label><span>${s.invalidation}</span></div>
+              <div class="signal-card-home-item"><label>Risk</label><span>${s.risk}</span></div>
+              <div class="signal-card-home-item"><label>Confidence</label><span>${s.confidence}</span></div>
+            </div>
+            <p class="signal-illustrative-tag">Illustrative signal — not a live recommendation.</p>
+          </div>
+        `).join('');
+      }
+
+      // === RISK PROFILE TABS ===
+      document.querySelectorAll('.risk-profile-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.risk-profile-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
