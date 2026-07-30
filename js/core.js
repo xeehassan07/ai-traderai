@@ -230,7 +230,7 @@
               <li><a href="/performance-methodology/">Performance Methodology</a></li>
               <li><a href="/pricing/">Pricing</a></li>
               <li><a href="/demo/">Interactive Demo</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/register/">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
