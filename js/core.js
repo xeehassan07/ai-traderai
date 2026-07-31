@@ -27,6 +27,16 @@
     if (!el) return;
     el.innerHTML = buildHeader();
     setupDropdowns(el);
+    // Render mobile nav outside header (to avoid height clip)
+    const existingMobile = document.getElementById('mobile-nav');
+    if (!existingMobile) {
+      const mobileNav = document.createElement('div');
+      mobileNav.id = 'mobile-nav';
+      mobileNav.className = 'mobile-nav';
+      mobileNav.setAttribute('aria-hidden', 'true');
+      mobileNav.innerHTML = buildMobileNav();
+      el.parentNode.insertBefore(mobileNav, el.nextSibling);
+    }
   }
 
   function buildHeader() {
@@ -89,8 +99,11 @@
             <span></span>
           </button>
         </div>
-      </div>
-      <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      </div>`;
+  }
+
+  function buildMobileNav() {
+    return `
         <details class="mobile-nav-section" open>
           <summary>Platform</summary>
           <a href="/ai-trading-platform/">AI Trading Platform</a>
@@ -124,8 +137,7 @@
         <div class="mobile-nav-actions">
           <button class="btn-signin" onclick="window.location.href='/register/'">Sign In</button>
           <a href="/register/" class="btn-primary-sm">Get Free Account</a>
-        </div>
-      </div>`;
+        </div>`;
   }
 
   function setupDropdowns(header) {
