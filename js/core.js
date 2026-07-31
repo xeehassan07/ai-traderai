@@ -135,8 +135,7 @@
           <a href="/blog/ai-trading-australia-guide/">AI Trading Australia</a>
         </details>
         <div class="mobile-nav-actions">
-          <button class="btn-signin" onclick="window.location.href='/register/'">Sign In</button>
-          <a href="/register/" class="btn-primary-sm">Get Free Account</a>
+          <a href="/register/" style="display:block;width:100%;text-align:center;padding:16px;font-size:1rem;font-weight:600;color:#fff;background:var(--blue);border:none;border-radius:10px;text-decoration:none;">Get Free Account</a>
         </div>`;
   }
 
