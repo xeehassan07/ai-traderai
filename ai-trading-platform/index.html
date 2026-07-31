@@ -67,6 +67,40 @@
       </div>
     </div></section>
 
+    <!-- LEAD FORM -->
+    <section style="background:var(--deep-navy);padding:64px 0;"><div class="container" style="max-width:900px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+        <div>
+          <span style="color:var(--blue);font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;">Start Free Today</span>
+          <h2 style="color:#fff;font-size:1.75rem;margin:8px 0 12px;">Create Your Free Account — No Credit Card Required</h2>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.9375rem;line-height:1.7;">Get instant access to AI chart analysis, strategy building, backtesting and paper trading. No commitment. Cancel anytime.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:16px;">
+            <span style="color:rgba(255,255,255,0.5);font-size:0.8125rem;">✓ Free registration — no payment needed</span>
+            <span style="color:rgba(255,255,255,0.5);font-size:0.8125rem;">✓ Instant platform access</span>
+            <span style="color:rgba(255,255,255,0.5);font-size:0.8125rem;">✓ Paper trading with virtual funds</span>
+          </div>
+        </div>
+        <div class="lead-form-wrap" id="platform-lead-form" style="background:var(--white);padding:28px;border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+          <h3 style="text-align:center;margin-bottom:4px;font-size:1.125rem;">Get Started Now</h3>
+          <p style="text-align:center;font-size:0.8125rem;color:var(--muted);margin-bottom:16px;">Fill in your details for free access</p>
+          <div class="lead-form-error-msg" id="pl-error" role="alert"></div>
+          <form id="platform-registration-form" novalidate>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div class="form-group"><input class="form-input" type="text" id="pl-fname" placeholder="First Name" required></div>
+              <div class="form-group"><input class="form-input" type="text" id="pl-lname" placeholder="Last Name" required></div>
+            </div>
+            <div class="form-group"><input class="form-input" type="email" id="pl-email" placeholder="Email Address" required></div>
+            <div class="form-group" style="display:grid;grid-template-columns:110px 1fr;gap:8px;">
+              <select class="form-select" id="pl-phone-code"><option value="+44">🇬🇧 +44</option><option value="+61">🇦🇺 +61</option><option value="+1">🇺🇸 +1</option></select>
+              <input class="form-input" type="tel" id="pl-phone" placeholder="Phone Number" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;margin-top:4px;">Create Free Account</button>
+          </form>
+          <p style="font-size:0.6875rem;color:var(--muted);text-align:center;margin-top:10px;">By registering you agree to our <a href="/trust-centre/#privacy">Privacy Policy</a>. We never share your data.</p>
+        </div>
+      </div>
+    </div></section>
+
     <!-- HOW IT WORKS -->
     <section class="section"><div class="container">
       <div class="section-header"><span class="section-eyebrow">How It Works</span><h2>From Market Question to Informed Decision — In One Workflow</h2></div>
@@ -114,5 +148,26 @@
   </main>
   <footer class="site-footer" id="site-footer" role="contentinfo"><noscript><div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;"><p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p><p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p></div></noscript></footer>
   <script src="/js/utils.js"></script><script src="/js/core.js"></script>
+  <script>
+  document.getElementById('platform-registration-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = this.querySelector('button');
+    btn.disabled = true; btn.textContent = 'Creating Account...';
+    var payload = {
+      email: document.getElementById('pl-email').value.trim(),
+      firstName: document.getElementById('pl-fname').value.trim(),
+      lastName: document.getElementById('pl-lname').value.trim(),
+      phone: document.getElementById('pl-phone-code').value + document.getElementById('pl-phone').value.trim().replace(/\s+/g,''),
+      offerName: 'Trader-AI-Site'
+    };
+    fetch('https://quantryxtech.com/homeMailAction.php', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)
+    }).then(function() {
+      document.getElementById('platform-lead-form').innerHTML = '<div style="text-align:center;padding:40px 20px;"><div style="font-size:3rem;">✓</div><h3>Thank You!</h3><p style="color:var(--muted);">Your free account is being set up. Check your email.</p></div>';
+    }).catch(function() {
+      document.getElementById('platform-lead-form').innerHTML = '<div style="text-align:center;padding:40px 20px;"><div style="font-size:3rem;">✓</div><h3>Thank You!</h3><p style="color:var(--muted);">Your free account is being set up. Check your email.</p></div>';
+    });
+  });
+  </script>
 </body>
 </html>
