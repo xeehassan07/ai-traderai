@@ -125,7 +125,7 @@
           <a href="/performance-methodology/">Performance Methodology</a>
         </details>
         <a href="/pricing/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;">Pricing</a>
-        <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;">Trust Centre</a>
+        <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;white-space:nowrap;">Trust Centre</a>
         <details class="mobile-nav-section">
           <summary>Blog</summary>
           <a href="/blog/what-is-ai-trading/">What Is AI Trading?</a>
