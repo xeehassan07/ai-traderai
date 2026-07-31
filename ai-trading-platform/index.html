@@ -3,401 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBEMUEyQiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmYiPlRBPC90ZXh0Pgo8L3N2Zz4=">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Trading Platform | Market Research & Testing | Trader AI</title>
-  <meta name="description" content="One platform for AI market research, chart analysis, strategy building, backtesting and paper trading. Connected tools for your entire trading workflow.">
+  <title>AI Trading Platform | Automated Trading Tools | Trader AI</title>
+  <meta name="description" content="Trader AI makes trading smarter. Real-time market analysis, AI-powered chart reading, strategy backtesting and paper trading. Start with free registration.">
   <link rel="canonical" href="https://ai-traderai.vercel.app/ai-trading-platform/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Trading Platform for Analysis and Strategy Testing | Trader AI">
-  <meta property="og:description" content="One AI trading platform for market research, chart analysis, strategy building, backtesting and simulated trading.">
-  <meta property="og:url" content="https://ai-traderai.vercel.app/ai-trading-platform/">
-  <meta property="og:image" content="https://ai-traderai.vercel.app/assets/images/og-default.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Trading Platform for Analysis and Strategy Testing | Trader AI">
-  <meta name="twitter:description" content="One AI trading platform for market research, chart analysis, strategy building, backtesting and simulated trading.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/main.css?v=6">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Platform","applicationCategory":"Trading Application","operatingSystem":"Web","description":"One AI trading platform for market research, chart analysis, strategy building, backtesting and simulated trading.","url":"https://ai-traderai.vercel.app/ai-trading-platform/","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ai-traderai.vercel.app/"},{"@type":"ListItem","position":2,"name":"AI Trading Platform","item":"https://ai-traderai.vercel.app/ai-trading-platform/"}]}
-  </script>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Trader AI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trader AI is an AI-assisted market research and strategy testing platform. It provides tools for chart analysis, strategy building, backtesting, paper trading, and risk management. It does not execute trades, manage money, or provide regulated financial advice."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does the platform work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start by choosing a market and asking a question or uploading a chart. The AI provides structured observations. You can build strategy rules, backtest them against historical data, and practise in a paper trading account — all within one connected workspace."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Trader AI guarantee profits?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Trading always involves risk. AI-generated analysis can be incorrect, incomplete, or outdated. Trader AI does not guarantee profits or predict market movements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the AI execute trades?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Trader AI does not execute trades, manage funds, or place orders. It is a research and analysis platform. You must use your own brokerage account for any trading."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What markets are covered?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trader AI provides analysis tools for forex, indices, commodities, cryptocurrencies, stocks and ETFs. Coverage varies by data provider availability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is my data handled?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We implement industry-standard encryption and access controls. See our Trust Centre for detailed security and privacy information."
-      }
-    }
-  ]
-}
-  </script>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLHY0BZWMX"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-BLHY0BZWMX");
-  </script>
+  <meta property="og:type" content="website"><meta property="og:title" content="AI Trading Platform | Automated Trading Tools | Trader AI"><meta property="og:description" content="Real-time market analysis, AI-powered charts, strategy backtesting. Free registration."><meta property="og:url" content="https://ai-traderai.vercel.app/ai-trading-platform/"><meta property="og:image" content="https://ai-traderai.vercel.app/assets/images/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI Trading Platform | Automated Trading Tools"><meta name="twitter:description" content="Real-time market analysis, AI-powered charts, strategy backtesting.">
+  <link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/main.css?v=6">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Platform","applicationCategory":"Trading Application","operatingSystem":"Web","url":"https://ai-traderai.vercel.app/ai-trading-platform/","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ai-traderai.vercel.app/"},{"@type":"ListItem","position":2,"name":"AI Trading Platform","item":"https://ai-traderai.vercel.app/ai-trading-platform/"}]}</script>
 </head>
 <body>
-  <header class="site-header" id="site-header" role="banner">
-  <noscript>
-    <div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-      <a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a>
-      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a>
-        <a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a>
-        <a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a>
-        <a href="/backtesting/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Backtesting</a>
-        <a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a>
-        <a href="/trust-centre/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Trust Centre</a>
-        <a href="/blog/what-is-ai-trading/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Blog</a>
-        <a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a>
-      </nav>
-    </div>
-  </noscript>
-</header>
+  <header class="site-header" id="site-header" role="banner"><noscript><div style="background:#0D1A2B;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;"><a href="/" style="color:#fff;font-weight:800;font-size:1rem;text-decoration:none;">Trader AI</a><nav style="display:flex;gap:14px;flex-wrap:wrap;"><a href="/ai-trading-platform/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Platform</a><a href="/tools/ai-chart-analyser/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Tools</a><a href="/ai-trader-leaderboard/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">AI Traders</a><a href="/pricing/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Pricing</a><a href="/register/" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;text-decoration:none;">Register</a></nav></div></noscript></header>
   <main id="main-content">
 
     <!-- HERO -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-content">
-          <span class="hero-eyebrow">Platform Overview</span>
-          <h1>The AI Trading Platform That Works While You Sleep</h1>
-          <p>Most traders miss opportunities — too slow, too tired, too late. Trader AI watches markets 24/7, analyses charts in seconds, and gives you the research tools to make informed decisions at the right moment.</p>
-          <div class="page-hero-actions">
-            <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
-            <a href="/register/" class="btn btn-light btn-lg">Create Free Access</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="page-hero"><div class="container"><div class="page-hero-content">
+      <span class="hero-eyebrow">AI Trading Platform</span>
+      <h1>The AI Platform That Works While You Sleep</h1>
+      <p>Most traders miss opportunities — too slow, too tired, too late. Trader AI watches markets 24/7, analyses patterns in seconds, and gives you the tools to act at the right moment. No coding. No guesswork. Just smarter trading.</p>
+      <div class="page-hero-actions"><a href="/register/" class="btn btn-primary btn-lg">Create Free Account</a><a href="/demo/" class="btn btn-light btn-lg">See How It Works</a></div>
+    </div></div></section>
 
-    <!-- PLATFORM OVERVIEW -->
-    <section class="section">
-      <div class="container" style="max-width:800px;">
-        <p style="font-size:1.125rem;color:var(--muted-dark);line-height:1.8;text-align:center;"><strong>Trader AI brings professional-grade AI trading tools to independent traders.</strong> While banks and hedge funds have used algorithmic trading for decades, most retail traders still rely on guesswork. Our platform gives you the same analytical firepower — real-time market intelligence, AI-powered chart analysis, strategy backtesting against years of historical data, and risk-free paper trading. Seven connected tools in one workspace. No coding required. You stay in full control of every decision.</p>
+    <!-- THE PROBLEM -->
+    <section class="section"><div class="container" style="max-width:800px;">
+      <div class="section-header"><span class="section-eyebrow">The Reality</span><h2>While Your Money Sleeps, Someone Else Is Making It Work</h2></div>
+      <p style="font-size:1.0625rem;color:var(--muted-dark);line-height:1.8;">Do you know what inflation does to cash? Over the last decade, £100,000 sitting in a bank account lost nearly <strong>20% of its real value</strong> — while the Nasdaq 100 grew by almost <strong>400%</strong>. The banks and institutions used algorithmic trading to capture those returns. Trader AI gives you access to the same calibre of analytical tools — without needing a Wall Street background.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;">
+        <div style="text-align:center;padding:20px;background:var(--off-white);border-radius:12px;"><div style="font-size:2rem;font-weight:800;color:var(--deep-navy);">24/7</div><div style="font-size:0.8125rem;color:var(--muted);margin-top:4px;">Market Monitoring</div></div>
+        <div style="text-align:center;padding:20px;background:var(--off-white);border-radius:12px;"><div style="font-size:2rem;font-weight:800;color:var(--deep-navy);">7</div><div style="font-size:0.8125rem;color:var(--muted);margin-top:4px;">Connected Tools</div></div>
+        <div style="text-align:center;padding:20px;background:var(--off-white);border-radius:12px;"><div style="font-size:2rem;font-weight:800;color:var(--deep-navy);">0</div><div style="font-size:0.8125rem;color:var(--muted);margin-top:4px;">Coding Required</div></div>
       </div>
-    </section>
+    </div></section>
 
-    <!-- TOOLS OVERVIEW - Compact Grid -->
-    <section class="section bg-off-white">
-      <div class="container">
-        <div class="section-header">
-          <h2>Seven Connected Tools</h2>
-          <p>Each tool is designed for a specific stage of your trading research workflow.</p>
+    <!-- WHAT YOU GET -->
+    <section class="section bg-off-white"><div class="container">
+      <div class="section-header"><span class="section-eyebrow">What You Get</span><h2>Everything You Need to Trade Smarter</h2></div>
+      <div class="grid grid-2" style="max-width:900px;margin:0 auto;gap:24px;">
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">📊 Real-Time Market Data</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">The AI scans markets around the clock and surfaces opportunities the moment they appear. Every signal includes clear rationale — so you always understand the "why" behind every observation.</p>
         </div>
-        <div class="grid grid-3" style="max-width:1000px;margin:0 auto;">
-          <a href="/ai-trading-assistant/" class="platform-card glow-hover">
-            <h4>AI Trading Assistant</h4>
-            <p>Ask market questions. Get structured research with context, scenarios and risk warnings.</p>
-            <span class="card-cta">Ask Trader AI →</span>
-          </a>
-          <a href="/tools/ai-chart-analyser/" class="platform-card glow-hover">
-            <h4>AI Chart Analyser</h4>
-            <p>Upload a chart screenshot. Receive trend, zone, momentum and scenario analysis.</p>
-            <span class="card-cta">Analyse a Chart →</span>
-          </a>
-          <a href="/ai-strategy-builder/" class="platform-card glow-hover">
-            <h4>Strategy Builder</h4>
-            <p>Describe your idea in plain English. Turn it into structured, testable rules.</p>
-            <span class="card-cta">Build a Strategy →</span>
-          </a>
-          <a href="/backtesting/" class="platform-card glow-hover">
-            <h4>Backtesting</h4>
-            <p>Test rules against historical data. Review returns, drawdowns and win rates.</p>
-            <span class="card-cta">Run a Backtest →</span>
-          </a>
-          <a href="/paper-trading/" class="platform-card glow-hover">
-            <h4>Paper Trading</h4>
-            <p>Practise with virtual funds. Track P/L, manage risk and keep a journal.</p>
-            <span class="card-cta">Start Paper Trading →</span>
-          </a>
-          <a href="/ai-trading-signals/" class="platform-card glow-hover">
-            <h4>AI Signals</h4>
-            <p>Review structured scenarios with entry areas, targets and invalidation levels.</p>
-            <span class="card-cta">View Signals →</span>
-          </a>
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">🤖 Set It, Test It, Trust It</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">Describe your strategy in plain English. The AI structures it into rules. Then backtest it against years of historical data before risking a single pound.</p>
         </div>
-        <div class="text-center mt-lg">
-          <a href="/risk-management/" class="platform-card glow-hover" style="display:inline-flex;flex-direction:row;align-items:center;gap:16px;text-align:left;max-width:400px;">
-            <h4 style="margin:0;">Risk Management</h4>
-            <p style="margin:0;">Position limits, loss caps, exposure tracking. <span class="card-cta">Configure →</span></p>
-          </a>
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">📈 AI Chart Analysis</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">Upload any chart screenshot. In seconds, the AI identifies trends, support and resistance zones, momentum conditions, and potential scenarios — like having a professional analyst on call.</p>
+        </div>
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">🛡️ Risk Controls Built In</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">Define position sizes, daily loss limits, and exposure caps before you trade. The platform stops things when they get risky — protecting your capital is the priority.</p>
+        </div>
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">📝 Practise Without Risk</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">Use paper trading with virtual funds to practise your strategy. Track P/L, monitor positions, and build confidence — all without risking real capital.</p>
+        </div>
+        <div style="background:var(--white);border-radius:12px;padding:28px;border:1px solid var(--border);">
+          <h3 style="font-size:1.125rem;margin-bottom:6px;">🔒 Your Data Is Safe</h3>
+          <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.6;">TLS encryption, multi-factor authentication, and strict access controls. We never sell your data. Your security is our foundation. <a href="/trust-centre/">Learn more →</a></p>
         </div>
       </div>
-    </section>
+    </div></section>
 
-    <!-- HOW IT WORKS - Connected Flow -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">How the Platform Works</span>
-          <h2>From Question to Informed Decision</h2>
-        </div>
-        <div class="steps-grid" style="max-width:1000px;margin:0 auto;">
-          <div class="step-item">
-            <span class="step-num">01</span>
-            <h4>Ask or Upload</h4>
-            <p>Start with a market question, upload a chart, or browse AI trader profiles.</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">02</span>
-            <h4>Review Analysis</h4>
-            <p>Examine structured AI observations with context, scenarios and identified risks.</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">03</span>
-            <h4>Build & Test</h4>
-            <p>Create strategy rules from plain language. Backtest against historical data.</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">04</span>
-            <h4>Practise</h4>
-            <p>Use paper trading to simulate your approach with virtual funds, no real risk.</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">05</span>
-            <h4>Decide</h4>
-            <p>Review all information, understand the risks, and make your own trading decision.</p>
-          </div>
-        </div>
+    <!-- HOW IT WORKS -->
+    <section class="section"><div class="container">
+      <div class="section-header"><span class="section-eyebrow">How It Works</span><h2>From Market Question to Informed Decision — In One Workflow</h2></div>
+      <div class="steps-grid" style="max-width:1000px;margin:0 auto;">
+        <div class="step-item"><span class="step-num">01</span><h4>Ask or Upload</h4><p>Type a market question or upload a chart. The AI responds with structured analysis — not guesswork.</p></div>
+        <div class="step-item"><span class="step-num">02</span><h4>Analyse</h4><p>Get trend direction, key price zones, momentum context, and risk scenarios — with clear confidence ratings.</p></div>
+        <div class="step-item"><span class="step-num">03</span><h4>Build & Test</h4><p>Turn your strategy into testable rules without code. Backtest against years of historical data.</p></div>
+        <div class="step-item"><span class="step-num">04</span><h4>Practise</h4><p>Run your strategy in a simulated paper trading account. Track performance risk-free.</p></div>
+        <div class="step-item"><span class="step-num">05</span><h4>Decide</h4><p>Review the data, understand the risks, make your own informed trading decision.</p></div>
       </div>
-    </section>
+    </div></section>
 
-    <!-- DEEP DIVE: Assistant + Chart Analyser -->
-    <section class="section bg-off-white">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Core Tools</span>
-          <h2>AI-Powered Research and Analysis</h2>
-          <p>These two tools form the foundation of the Trader AI research workflow.</p>
-        </div>
-        <div class="grid grid-2" style="max-width:900px;margin:0 auto;gap:32px;">
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px;">
-            <h3 style="font-size:1.25rem;margin-bottom:12px;">AI Trading Assistant</h3>
-            <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:16px;">Ask market questions in plain language. The assistant provides structured responses covering market context, technical structure, key levels, potential scenarios and identified risks — not predictions, but observations based on available data.</p>
-            <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:0.8125rem;color:var(--muted-dark);margin-bottom:16px;">
-              <strong>Example:</strong> "Analyse EUR/USD on the 4-hour chart. What is the current structure and where are the key levels?"
-            </div>
-            <a href="/register/" class="btn btn-secondary">Create Free Access</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px;">
-            <h3 style="font-size:1.25rem;margin-bottom:12px;">AI Chart Analyser</h3>
-            <p style="font-size:0.9375rem;color:var(--muted-dark);line-height:1.7;margin-bottom:16px;">Upload a chart screenshot from any platform — TradingView, MetaTrader, or a simple image. The AI identifies visible trends, support and resistance zones, momentum conditions, and provides bullish and bearish scenarios with clear invalidation levels.</p>
-            <div style="background:var(--off-white);border-radius:8px;padding:14px;font-size:0.8125rem;color:var(--muted-dark);margin-bottom:16px;">
-              <strong>Supports:</strong> PNG, JPG, JPEG, WEBP — up to 10 MB per chart image.
-            </div>
-            <a href="/register/" class="btn btn-secondary">Create Free Access</a>
-          </div>
-        </div>
+    <!-- THE TOOLS -->
+    <section class="section bg-off-white"><div class="container">
+      <div class="section-header"><span class="section-eyebrow">Platform Tools</span><h2>Seven Connected Trading Tools — One Platform</h2></div>
+      <div class="grid grid-3" style="max-width:1000px;margin:0 auto;">
+        <a href="/ai-trading-assistant/" class="platform-card glow-hover"><h4>AI Trading Assistant</h4><p>Ask market questions. Get structured research with context, scenarios and risk warnings.</p><span class="card-cta">Ask Trader AI →</span></a>
+        <a href="/tools/ai-chart-analyser/" class="platform-card glow-hover"><h4>AI Chart Analyser</h4><p>Upload a chart screenshot. Receive trend, zone, momentum and scenario analysis.</p><span class="card-cta">Analyse a Chart →</span></a>
+        <a href="/ai-strategy-builder/" class="platform-card glow-hover"><h4>Strategy Builder</h4><p>Describe your idea in plain English. Turn it into structured, testable rules.</p><span class="card-cta">Build a Strategy →</span></a>
+        <a href="/backtesting/" class="platform-card glow-hover"><h4>Backtesting</h4><p>Test rules against historical data. Review returns, drawdowns and win rates.</p><span class="card-cta">Run a Backtest →</span></a>
+        <a href="/paper-trading/" class="platform-card glow-hover"><h4>Paper Trading</h4><p>Practise with virtual funds. Track P/L, manage risk and keep a journal.</p><span class="card-cta">Start Paper Trading →</span></a>
+        <a href="/ai-trading-signals/" class="platform-card glow-hover"><h4>AI Trading Signals</h4><p>Structured market scenarios with entry areas, targets and invalidation levels.</p><span class="card-cta">View Signals →</span></a>
       </div>
-    </section>
+    </div></section>
 
-    <!-- DEEP DIVE: Strategy + Backtesting + Paper -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Build & Test</span>
-          <h2>From Strategy Idea to Tested Result</h2>
-          <p>Three connected tools that take you from concept to validated approach.</p>
-        </div>
-        <div class="grid grid-3" style="max-width:1000px;margin:0 auto;">
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">1. Strategy Builder</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Describe your entry, exit, and risk rules in plain English. The AI converts your description into structured, editable rules — no coding required.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">2. Backtesting</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Run your strategy against historical data. Review net return, max drawdown, win rate, profit factor, and equity curves with visible assumptions.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">3. Paper Trading</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Practise in a simulated account with virtual funds. Track positions, P/L, risk usage, and maintain a trade journal — all without real capital.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ADDITIONAL TOOLS -->
-    <section class="section bg-off-white">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Additional Tools</span>
-          <h2>Signals, Leaderboard and Risk Management</h2>
-        </div>
-        <div class="grid grid-3" style="max-width:1000px;margin:0 auto;">
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">AI Signals</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Structured market scenarios with entry areas, invalidation levels, risk context and data source transparency.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">Leaderboard</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Compare AI trader strategies across markets, risk profiles and performance metrics. All data transparently labelled.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px;">
-            <h3 style="font-size:1.125rem;margin-bottom:8px;">Risk Management</h3>
-            <p style="font-size:0.875rem;color:var(--muted-dark);line-height:1.6;margin-bottom:12px;">Position size limits, daily loss caps, exposure tracking and strategy pause conditions.</p>
-            <a href="/register/" class="btn btn-sm btn-secondary">Create Free Access</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DATA TRANSPARENCY -->
-    <section class="section">
-      <div class="container" style="max-width:800px;">
-        <div class="section-header">
-          <span class="section-eyebrow">Transparency</span>
-          <h2>Every Data Point Is Clearly Labelled</h2>
-        </div>
-        <div class="comparison-table-wrap">
-          <table class="comparison-table">
-            <thead><tr><th>Data Type</th><th>What It Means</th><th>Where Used</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Live</strong></td><td>Real-time market data from connected providers</td><td>Market monitoring, active context</td></tr>
-              <tr><td><strong>Delayed</strong></td><td>Market data with 10–15 minute delay</td><td>General analysis and research</td></tr>
-              <tr><td><strong>Simulated</strong></td><td>Generated data mimicking market conditions</td><td>Paper trading, strategy practice</td></tr>
-              <tr><td><strong>Backtested</strong></td><td>Historical data applied to strategy rules</td><td>Strategy testing and evaluation</td></tr>
-              <tr><td><strong>Illustrative</strong></td><td>Sample data demonstrating the interface</td><td>Demos, examples, onboarding</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHO IT'S FOR -->
-    <section class="section bg-off-white">
-      <div class="container">
-        <div class="section-header">
-          <h2>Who Is Trader AI For?</h2>
-        </div>
-        <div class="grid grid-3" style="max-width:1000px;margin:0 auto;">
-          <div class="feature-card"><div class="feature-card-icon">🌱</div><h3>New Traders</h3><p>Learn market concepts through structured AI observations and practise with paper trading before considering real funds.</p></div>
-          <div class="feature-card"><div class="feature-card-icon">📊</div><h3>Self-Directed Traders</h3><p>Add AI-powered context to your existing analysis process. Test ideas before committing capital.</p></div>
-          <div class="feature-card"><div class="feature-card-icon">🛠️</div><h3>Strategy Builders</h3><p>Turn trading ideas into structured, testable rules. Backtest and refine before going live.</p></div>
-          <div class="feature-card"><div class="feature-card-icon">🛡️</div><h3>Risk-Conscious Traders</h3><p>Define position limits, loss caps and exposure guardrails before every trade.</p></div>
-          <div class="feature-card"><div class="feature-card-icon">🔬</div><h3>Researchers</h3><p>Explore AI capabilities and limitations in market analysis with transparent, labelled outputs.</p></div>
-          <div class="feature-card"><div class="feature-card-icon">📈</div><h3>Performance Analysts</h3><p>Study strategy metrics, drawdown analysis and detailed performance breakdowns.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIMITATIONS -->
-    <section class="section">
-      <div class="container" style="max-width:800px;">
-        <div class="section-header">
-          <h2>Platform Limitations</h2>
-          <p>Understanding what Trader AI does not do is as important as understanding what it does.</p>
-        </div>
-        <div class="alert alert-info"><strong>Does not provide financial advice.</strong> All AI-generated content is for informational purposes. It is not personalised advice.</div>
-        <div class="alert alert-info"><strong>Does not predict prices.</strong> Analysis is based on visible data. Markets can move unexpectedly. AI outputs can be incorrect.</div>
-        <div class="alert alert-info"><strong>Does not execute trades.</strong> Trader AI is a research platform. It does not place orders or manage funds.</div>
-        <div class="alert alert-info"><strong>Does not guarantee results.</strong> Backtested and simulated results are hypothetical. They do not guarantee future outcomes.</div>
-      </div>
-    </section>
+    <!-- TRUST -->
+    <section class="section"><div class="container" style="max-width:800px;">
+      <div class="section-header"><span class="section-eyebrow">Transparency</span><h2>Every Data Point Is Clearly Labelled</h2><p>You always know what you're looking at — Live, Delayed, Simulated, Backtested or Illustrative.</p></div>
+      <div class="comparison-table-wrap"><table class="comparison-table"><thead><tr><th>Data Type</th><th>What It Means</th><th>Where Used</th></tr></thead><tbody>
+        <tr><td><strong>Live</strong></td><td>Real-time data from connected providers</td><td>Market monitoring</td></tr>
+        <tr><td><strong>Delayed</strong></td><td>10-15 minute delay</td><td>General analysis</td></tr>
+        <tr><td><strong>Simulated</strong></td><td>Mimics market conditions</td><td>Paper trading</td></tr>
+        <tr><td><strong>Backtested</strong></td><td>Historical data applied to rules</td><td>Strategy testing</td></tr>
+        <tr><td><strong>Illustrative</strong></td><td>Sample demonstration data</td><td>Demos and onboarding</td></tr>
+      </tbody></table></div>
+    </div></section>
 
     <!-- FAQs -->
-    <section class="section bg-off-white">
-      <div class="container" style="max-width:800px;">
-        <div class="section-header"><h2>Frequently Asked Questions</h2></div>
-        <div class="faq-list">
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is Trader AI?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Trader AI is an AI-assisted market research and strategy testing platform. It provides tools for chart analysis, strategy building, backtesting, paper trading, and risk management. It does not execute trades, manage money, or provide regulated financial advice.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How does the platform work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Start by choosing a market and asking a question or uploading a chart. The AI provides structured observations. You can build strategy rules, backtest them against historical data, and practise in a paper trading account — all within one connected workspace.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Does Trader AI guarantee profits?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Trading always involves risk. AI-generated analysis can be incorrect, incomplete, or outdated. Trader AI does not guarantee profits or predict market movements.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Does the AI execute trades?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Trader AI does not execute trades, manage funds, or place orders. It is a research and analysis platform. You must use your own brokerage account for any trading.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What markets are covered?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Trader AI provides analysis tools for forex, indices, commodities, cryptocurrencies, stocks and ETFs. Coverage varies by data provider availability.</p></div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How is my data handled?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>We implement industry-standard encryption and access controls. See our <a href="/trust-centre/">Trust Centre</a> for detailed security and privacy information.</p></div></div>
-        </div>
+    <section class="section bg-off-white"><div class="container" style="max-width:800px;">
+      <div class="section-header"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is Trader AI?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Trader AI is an AI-powered trading platform that provides real-time market analysis, AI chart reading, strategy building, backtesting and paper trading tools. It helps traders make informed decisions — it does not execute trades or hold funds.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do I need coding experience?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Every tool is designed to work with plain English. Describe your strategy in words, upload charts as screenshots, and the AI handles the technical analysis. Zero coding required.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Does the AI execute trades for me?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Trader AI is a research and analysis platform. It provides tools to support your decisions but never places trades, manages funds, or provides financial advice. You stay in full control.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Is my money safe?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Trader AI does not hold, handle or process client funds. Trading is done through your own brokerage account. We use TLS encryption, multi-factor authentication and strict access controls to protect your data.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can I try it before committing?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Register for free access and explore the platform. Paper trading lets you practise with virtual funds. No payment required to start.</p></div></div>
       </div>
-    </section>
+    </div></section>
 
     <!-- CTA -->
-    <section style="background:var(--off-white);padding:80px 0;">
-      <div class="container" style="text-align:center;">
-        <span class="section-eyebrow">Get Started</span>
-        <h2 style="color:var(--deep-navy);font-size:2rem;margin-bottom:12px;">Ready to Explore Trader AI?</h2>
-        <p style="color:var(--muted);font-size:1.0625rem;max-width:550px;margin:0 auto 24px;">Discover AI-assisted market research, strategy testing and risk management tools in one platform.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
-          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
-        </div>
-      </div>
-    </section>
+    <section style="background:var(--off-white);padding:80px 0;border-top:1px solid var(--border);"><div class="container" style="text-align:center;">
+      <span class="section-eyebrow">Start Trading Smarter</span>
+      <h2 style="color:var(--deep-navy);font-size:2rem;margin-bottom:12px;">Stop Guessing. Start Analysing.</h2>
+      <p style="color:var(--muted);font-size:1.0625rem;max-width:550px;margin:0 auto 24px;">Join thousands of traders who use Trader AI to research markets, test strategies and manage risk — before they place a single trade.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><a href="/register/" class="btn btn-primary btn-lg">Create Free Account</a><a href="/demo/" class="btn btn-secondary btn-lg">Explore the Demo</a></div>
+    </div></section>
 
   </main>
-  <footer class="site-footer" id="site-footer" role="contentinfo">
-  <noscript>
-    <div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;">
-      <p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
-      <p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p>
-    </div>
-  </noscript>
-</footer>
-  <script src="/js/utils.js"></script>
-  <script src="/js/components.js"></script>
-  <script src="/content/data.js"></script>
-  <script src="/js/market-ticker.js"></script>
-  <script src="/js/forms.js"></script>
-  <script src="/js/core.js"></script>
+  <footer class="site-footer" id="site-footer" role="contentinfo"><noscript><div style="background:#0D1A2B;padding:20px;color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;"><p><strong>Trader AI</strong> — AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p><p style="margin-top:8px;">© 2026 Trader AI. All rights reserved. Trading involves risk.</p></div></noscript></footer>
+  <script src="/js/utils.js"></script><script src="/js/core.js"></script>
 </body>
 </html>
