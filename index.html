@@ -1099,6 +1099,18 @@
       });
 
     });
+  // Mobile menu failsafe
+  setTimeout(function() {
+    var t = document.querySelector('.mobile-nav-toggle');
+    var n = document.getElementById('mobile-nav');
+    if (t && n && !t._bound) {
+      t._bound = true;
+      t.addEventListener('click', function() {
+        var open = n.classList.toggle('active');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  }, 500);
   </script>
 </body>
 </html>
