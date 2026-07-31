@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-        <details class="mobile-nav-section">
+        <details class="mobile-nav-section" open>
           <summary>Platform</summary>
           <a href="/ai-trading-platform/">AI Trading Platform</a>
           <a href="/ai-trading-assistant/">AI Trading Assistant</a>
@@ -111,8 +111,8 @@
           <a href="/ai-traders/">AI Traders Directory</a>
           <a href="/performance-methodology/">Performance Methodology</a>
         </details>
-        <a href="/pricing/" class="mobile-nav-section" style="display:block;padding:var(--space) 0;font-weight:600;">Pricing</a>
-        <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:var(--space) 0;font-weight:600;">Trust Centre</a>
+        <a href="/pricing/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;">Pricing</a>
+        <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;">Trust Centre</a>
         <details class="mobile-nav-section">
           <summary>Blog</summary>
           <a href="/blog/what-is-ai-trading/">What Is AI Trading?</a>
