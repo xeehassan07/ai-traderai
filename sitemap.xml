@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ai-traderai.vercel.app/</loc>
+    <loc>https://thetraderai.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/demo/</loc>
+    <loc>https://thetraderai.net/demo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/register/</loc>
+    <loc>https://thetraderai.net/register/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/tools/ai-chart-analyser/</loc>
+    <loc>https://thetraderai.net/tools/ai-chart-analyser/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-trading-assistant/</loc>
+    <loc>https://thetraderai.net/ai-trading-assistant/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-strategy-builder/</loc>
+    <loc>https://thetraderai.net/ai-strategy-builder/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-trader-leaderboard/</loc>
+    <loc>https://thetraderai.net/ai-trader-leaderboard/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-traders/</loc>
+    <loc>https://thetraderai.net/ai-traders/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/backtesting/</loc>
+    <loc>https://thetraderai.net/backtesting/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/paper-trading/</loc>
+    <loc>https://thetraderai.net/paper-trading/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/risk-management/</loc>
+    <loc>https://thetraderai.net/risk-management/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/performance-methodology/</loc>
+    <loc>https://thetraderai.net/performance-methodology/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/trust-centre/</loc>
+    <loc>https://thetraderai.net/trust-centre/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/pricing/</loc>
+    <loc>https://thetraderai.net/pricing/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-trading-platform/</loc>
+    <loc>https://thetraderai.net/ai-trading-platform/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/ai-trading-signals/</loc>
+    <loc>https://thetraderai.net/ai-trading-signals/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/blog/what-is-ai-trading/</loc>
+    <loc>https://thetraderai.net/blog/what-is-ai-trading/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/blog/backtest-without-coding/</loc>
+    <loc>https://thetraderai.net/blog/backtest-without-coding/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/blog/is-ai-trading-safe/</loc>
+    <loc>https://thetraderai.net/blog/is-ai-trading-safe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/blog/best-ai-trading-platforms-uk/</loc>
+    <loc>https://thetraderai.net/blog/best-ai-trading-platforms-uk/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ai-traderai.vercel.app/blog/ai-trading-australia-guide/</loc>
+    <loc>https://thetraderai.net/blog/ai-trading-australia-guide/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
