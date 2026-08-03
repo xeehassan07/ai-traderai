@@ -531,22 +531,62 @@
           <h2>Describe Your Strategy in Plain English</h2>
           <p>Turn a trading idea into structured, editable rules without writing code.</p>
         </div>
-        <div style="max-width:720px;margin:0 auto;">
-          <textarea class="strategy-input" readonly>Monitor EUR/USD on the one-hour timeframe. Consider an entry when price is above the 200-period moving average and RSI crosses above 50. Close the position if RSI falls below 45.</textarea>
-          <div class="strategy-rules-output">
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Market</div><div class="strategy-rule-value">Forex — EUR/USD</div></div>
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Timeframe</div><div class="strategy-rule-value">1 Hour</div></div>
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Entry Conditions</div><div class="strategy-rule-value">Price > 200 MA + RSI > 50</div></div>
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Exit Conditions</div><div class="strategy-rule-value">RSI < 45</div></div>
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Stop Logic</div><div class="strategy-rule-value">Not specified</div></div>
-            <div class="strategy-rule-item"><div class="strategy-rule-label">Daily Risk Limit</div><div class="strategy-rule-value">Not specified</div></div>
+        <div class="strategy-live-demo">
+          <!-- LEFT: Code-like input -->
+          <div class="strategy-input-panel">
+            <div class="strategy-input-header">
+              <span class="strategy-dot red"></span><span class="strategy-dot yellow"></span><span class="strategy-dot green"></span>
+              <span style="font-size:0.6875rem;color:rgba(255,255,255,0.3);margin-left:8px;">Strategy Builder — Plain English</span>
+            </div>
+            <div class="strategy-input-body">
+              <div class="strategy-line-numbers">1<br>2<br>3<br>4<br>5</div>
+              <textarea class="strategy-input-live" readonly>Monitor EUR/USD on the one-hour timeframe.&#10;Consider an entry when price is above the 200-period moving average and RSI crosses above 50.&#10;Close the position if RSI falls below 45.&#10;&#10;Risk limit: 2% of account per trade.</textarea>
+            </div>
+            <div style="display:flex;gap:8px;padding:10px 14px;border-top:1px solid rgba(255,255,255,0.05);">
+              <span style="font-size:0.625rem;color:var(--success);font-weight:600;">✓ Plain English detected</span>
+              <span style="font-size:0.625rem;color:var(--warning);font-weight:600;">⚠ 2 missing rules</span>
+            </div>
           </div>
-          <div class="strategy-validation-warning">⚠ Missing exit rules — consider adding stop-loss and take-profit conditions.</div>
-          <div class="strategy-validation-warning">⚠ Missing risk rules — specify position size and maximum daily loss.</div>
-          <p class="text-center mt-lg">
-            <a href="/register/" class="btn btn-primary">Create Free Access</a>
-          </p>
+          <!-- RIGHT: Visual output -->
+          <div class="strategy-output-panel">
+            <div class="strategy-output-header">
+              <span style="font-weight:700;font-size:0.8125rem;">Generated Strategy Rules</span>
+              <span style="font-size:0.625rem;color:var(--muted);">Auto-generated from your description</span>
+            </div>
+            <div class="strategy-visual-flow">
+              <div class="strategy-flow-step">
+                <div class="flow-icon">📊</div>
+                <div class="flow-label">Market</div>
+                <div class="flow-value">EUR/USD · 1H</div>
+              </div>
+              <div class="strategy-flow-arrow">→</div>
+              <div class="strategy-flow-step">
+                <div class="flow-icon">✅</div>
+                <div class="flow-label">Entry</div>
+                <div class="flow-value">Price > 200 MA<br>RSI > 50</div>
+              </div>
+              <div class="strategy-flow-arrow">→</div>
+              <div class="strategy-flow-step">
+                <div class="flow-icon">🚪</div>
+                <div class="flow-label">Exit</div>
+                <div class="flow-value">RSI < 45</div>
+              </div>
+              <div class="strategy-flow-arrow">→</div>
+              <div class="strategy-flow-step">
+                <div class="flow-icon">🛡️</div>
+                <div class="flow-label">Risk</div>
+                <div class="flow-value">2% per trade</div>
+              </div>
+            </div>
+            <div class="strategy-missing-warnings">
+              <div class="strategy-missing-item">⚠ Stop-loss not defined</div>
+              <div class="strategy-missing-item">⚠ Take-profit not defined</div>
+            </div>
+          </div>
         </div>
+        <p class="text-center mt-lg">
+          <a href="/register/" class="btn btn-primary">Create Free Access</a>
+        </p>
       </div>
     </section>
 
