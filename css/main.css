@@ -43,3 +43,4 @@ linear-gradient(90deg, rgba(59,130,246,0.015) 1px, transparent 1px);background-s
 .strategy-missing-warnings{padding:12px 16px;border-top:1px solid var(--border-light);display:flex;flex-direction:column;gap:4px;}
 .strategy-missing-item{font-size:0.6875rem;color:#92400E;background:#FFFBEB;padding:6px 10px;border-radius:6px;}
 @media(max-width:768px){.strategy-live-demo{grid-template-columns:1fr}}
+@media(max-width:640px){.section{padding:32px 0!important}.section-sm{padding:24px 0!important}.section-lg{padding:40px 0!important}.hero-home{padding:80px 0 32px!important}.page-hero{padding:40px 0 24px!important}.split-visual{margin-top:16px}.platform-feature{padding:24px 0!important}.cta-section{padding:40px 0!important}.cta-home-final{padding:40px 0!important}}
