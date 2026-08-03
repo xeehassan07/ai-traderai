@@ -1053,18 +1053,6 @@
     <a href="/register/" style="display:block;width:100%;text-align:center;padding:14px;font-size:1rem;font-weight:700;color:#fff;background:var(--blue);border-radius:10px;text-decoration:none;box-shadow:0 4px 14px rgba(37,99,235,0.35);">Create Free Account</a>
   </div>
 
-  <!-- Exit Intent Popup -->
-  <div id="exit-popup" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;">
-    <div style="background:#fff;border-radius:16px;padding:32px;max-width:420px;text-align:center;position:relative;margin:20px;">
-      <button onclick="document.getElementById('exit-popup').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--muted);">×</button>
-      <div style="font-size:3rem;margin-bottom:12px;">⏳</div>
-      <h3 style="margin-bottom:8px;">Wait — Before You Go</h3>
-      <p style="color:var(--muted);font-size:0.9375rem;margin-bottom:20px;">Create your free account and get instant access to AI chart analysis, strategy backtesting, and paper trading — no credit card needed.</p>
-      <a href="/register/" class="btn btn-primary btn-lg" style="width:100%;">Create Free Account</a>
-      <p style="font-size:0.6875rem;color:var(--muted);margin-top:12px;">Free forever tier. No commitments.</p>
-    </div>
-  </div>
-
   <!-- ============================================ -->
   <!-- 23. FOOTER (rendered by core.js)             -->
   <!-- ============================================ -->
@@ -1129,14 +1117,6 @@
       });
 
     });
-  // Exit intent detection
-  var exitShown = false;
-  document.addEventListener('mouseout', function(e) {
-    if (!exitShown && e.clientY < 10) {
-      exitShown = true;
-      document.getElementById('exit-popup').style.display = 'flex';
-    }
-  });
   </script>
 </body>
 </html>
