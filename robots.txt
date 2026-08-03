@@ -5,4 +5,4 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /content/
 
-Sitemap: https://traderai.com/sitemap.xml
+Sitemap: https://ai-traderai.vercel.app/sitemap.xml
