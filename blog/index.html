@@ -23,25 +23,6 @@
   <link rel="stylesheet" href="/css/main.css?v=7">
   <link rel="stylesheet" href="/css/fonts.css">
 
-  <style>
-    .blog-hero{padding:var(--space-3xl) 0 var(--space-xl);}
-    .blog-hero h1{font-size:clamp(2rem,3.5vw,2.75rem);margin-bottom:var(--space-sm);}
-    .blog-hero p{font-size:1.0625rem;color:var(--muted);max-width:600px;line-height:1.7;}
-    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-md);}
-    .blog-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);transition:box-shadow var(--transition);}
-    .blog-card:hover{box-shadow:var(--shadow-md);}
-    .blog-card-tag{font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--blue);margin-bottom:var(--space-sm);display:block;}
-    .blog-card h2{font-size:1.0625rem;line-height:1.4;margin-bottom:var(--space-sm);}
-    .blog-card h2 a{color:var(--deep-navy);}
-    .blog-card h2 a:hover{color:var(--blue);}
-    .blog-card p{font-size:0.875rem;color:var(--muted);line-height:1.6;margin-bottom:var(--space);}
-    .blog-card-date{font-size:0.75rem;color:var(--muted-light);padding-top:var(--space);border-top:1px solid var(--border-light);}
-    .risk-disclaimer{max-width:640px;margin-left:auto;margin-right:auto;}
-
-    @media (max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
-    @media (max-width:640px){.blog-grid{grid-template-columns:1fr;}}
-  </style>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,10 +58,13 @@
 
   <main id="main-content">
 
-    <section class="blog-hero reveal">
+    <section class="section reveal">
       <div class="container">
-        <h1>AI Trading Blog</h1>
-        <p>Educational articles on AI-assisted trading, strategy testing, and risk management. Clear explanations, no hype.</p>
+        <div class="section-header">
+          <span class="section-eyebrow">Educational Resources</span>
+          <h1>AI Trading Blog</h1>
+          <p>Educational articles on AI-assisted trading, strategy testing, and risk management. Clear explanations, no hype.</p>
+        </div>
       </div>
     </section>
 
@@ -124,10 +108,14 @@
           </article>
 
         </div>
+
+        <div class="risk-disclaimer" style="margin-top:var(--space-xl);">
+          <strong>Educational Content Only:</strong> All articles are for educational and informational purposes. They do not constitute financial advice, investment recommendations, or trading guidance. Trading involves risk. Always conduct your own research.
+        </div>
       </div>
     </section>
 
-    <section class="section bg-off-white reveal" id="blog-cta">
+    <section class="section bg-off-white reveal">
       <div class="container">
         <div class="section-header">
           <h2>Ready to Apply What You've Learned?</h2>
@@ -136,9 +124,6 @@
         <p class="text-center">
           <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
         </p>
-        <div class="risk-disclaimer" style="margin-top:var(--space-lg);">
-          <strong>Educational Content Only:</strong> All articles are for educational and informational purposes. They do not constitute financial advice, investment recommendations, or trading guidance. Trading involves risk. Always conduct your own research.
-        </div>
       </div>
     </section>
 
