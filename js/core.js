@@ -80,7 +80,7 @@
           <a href="/trust-centre/">Trust Centre</a>
         </nav>
         <div class="header-actions">
-          <button class="btn-signin" onclick="window.location.href='/register/'">Sign In</button>
+          <a href="https://apexaiactivation.com/login" class="btn-signin" target="_blank" rel="noopener">Sign In</a>
           <a href="/register/" class="btn-primary-sm">Get Free Account</a>
           <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation" aria-expanded="false">
             <span></span>
