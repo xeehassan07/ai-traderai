@@ -208,7 +208,7 @@
             <p style="font-size:0.8125rem;color:rgba(255,255,255,0.7);margin-top:12px;line-height:1.8;">
               📞 UK +44 20 3927 2999<br>
               📞 AU +61 2 8488 9800<br>
-              ✉️ info@traderai.ai
+              ✉️ info@thetraderai.net
             </p>
           </div>
           <div class="footer-column">
