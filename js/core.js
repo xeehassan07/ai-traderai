@@ -75,8 +75,6 @@
               <a href="/performance-methodology/">Performance Methodology</a>
             </div>
           </div>
-          <a href="/backtesting/">Backtesting</a>
-          <a href="/ai-trading-signals/">Signals</a>
           <div class="nav-dropdown">
             <button aria-haspopup="true" aria-expanded="false">Blog <span aria-hidden="true">▾</span></button>
             <div class="nav-dropdown-menu">
