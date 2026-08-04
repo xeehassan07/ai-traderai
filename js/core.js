@@ -223,12 +223,13 @@
           <div class="footer-column">
             <h4>Company</h4>
             <ul>
+              <li><a href="/about-us/">About Us</a></li>
+              <li><a href="/contact-us/">Contact Us</a></li>
               <li><a href="/trust-centre/">Trust Centre</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/performance-methodology/">Performance Methodology</a></li>
               <li><a href="/pricing/">Pricing</a></li>
               <li><a href="/demo/">Interactive Demo</a></li>
-              <li><a href="/register/">Contact</a></li>
             </ul>
           </div>
           <div class="footer-column">
