@@ -75,18 +75,7 @@
               <a href="/performance-methodology/">Performance Methodology</a>
             </div>
           </div>
-          <div class="nav-dropdown">
-            <button aria-haspopup="true" aria-expanded="false">Blog <span aria-hidden="true">▾</span></button>
-            <div class="nav-dropdown-menu">
-              <span class="dropdown-label">Blog</span>
-              <a href="/blog/">All Articles</a>
-              <a href="/blog/what-is-ai-trading/">What Is AI Trading?</a>
-              <a href="/blog/backtest-without-coding/">Backtest Without Coding</a>
-              <a href="/blog/is-ai-trading-safe/">Is AI Trading Safe?</a>
-              <a href="/blog/best-ai-trading-platforms-uk/">Best AI Platforms UK</a>
-              <a href="/blog/ai-trading-australia-guide/">AI Trading Australia</a>
-            </div>
-          </div>
+          <a href="/blog/">Blog</a>
           <a href="/pricing/">Pricing</a>
           <a href="/trust-centre/">Trust Centre</a>
         </nav>
