@@ -79,6 +79,7 @@
             <button aria-haspopup="true" aria-expanded="false">Blog <span aria-hidden="true">▾</span></button>
             <div class="nav-dropdown-menu">
               <span class="dropdown-label">Blog</span>
+              <a href="/blog/">All Articles</a>
               <a href="/blog/what-is-ai-trading/">What Is AI Trading?</a>
               <a href="/blog/backtest-without-coding/">Backtest Without Coding</a>
               <a href="/blog/is-ai-trading-safe/">Is AI Trading Safe?</a>
@@ -125,6 +126,7 @@
         <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;white-space:nowrap;">Trust Centre</a>
         <details class="mobile-nav-section">
           <summary>Blog</summary>
+          <a href="/blog/">All Articles</a>
           <a href="/blog/what-is-ai-trading/">What Is AI Trading?</a>
           <a href="/blog/backtest-without-coding/">Backtest Without Coding</a>
           <a href="/blog/is-ai-trading-safe/">Is AI Trading Safe?</a>
@@ -233,7 +235,7 @@
             <h4>Company</h4>
             <ul>
               <li><a href="/trust-centre/">Trust Centre</a></li>
-              <li><a href="/blog/what-is-ai-trading/">Blog</a></li>
+              <li><a href="/blog/">Blog</a></li>
               <li><a href="/performance-methodology/">Performance Methodology</a></li>
               <li><a href="/pricing/">Pricing</a></li>
               <li><a href="/demo/">Interactive Demo</a></li>
