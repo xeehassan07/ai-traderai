@@ -8,20 +8,89 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Trading Blog — Insights, Guides & Research | Trader AI</title>
-  <meta name="description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for UK traders.">
+  <meta name="description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for traders.">
   <link rel="canonical" href="https://thetraderai.net/blog/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Trading Blog — Insights, Guides & Research | Trader AI">
-  <meta property="og:description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for UK traders.">
+  <meta property="og:description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for traders.">
   <meta property="og:url" content="https://thetraderai.net/blog/">
   <meta property="og:image" content="https://thetraderai.net/assets/images/og-default.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Trading Blog — Insights, Guides & Research | Trader AI">
-  <meta name="twitter:description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for UK traders.">
+  <meta name="twitter:description" content="Read our latest articles on AI trading, backtesting, strategy building, paper trading and risk management. Educational guides for traders.">
   <link rel="stylesheet" href="/css/main.css?v=7">
   <link rel="stylesheet" href="/css/fonts.css">
+
+  <style>
+    /* === Blog Page Specific Styles === */
+    .blog-hero{background:var(--deep-navy);padding:var(--space-3xl) 0 var(--space-2xl);position:relative;overflow:hidden;}
+    .blog-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%, rgba(37,99,235,0.12) 0%, transparent 60%),radial-gradient(ellipse at 70% 30%, rgba(59,130,246,0.06) 0%, transparent 50%);pointer-events:none;}
+    .blog-hero .container{position:relative;z-index:1;}
+    .blog-hero-content{max-width:640px;}
+    .blog-hero h1{color:var(--white);font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--space);}
+    .blog-hero p{color:rgba(255,255,255,0.6);font-size:1.0625rem;line-height:1.7;margin-bottom:0;}
+    .blog-hero-meta{display:flex;gap:var(--space-lg);margin-top:var(--space-md);flex-wrap:wrap;}
+    .blog-hero-stat{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.5);font-size:0.8125rem;}
+    .blog-hero-stat strong{color:var(--white);font-size:1.125rem;}
+
+    /* Featured article */
+    .blog-featured{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition);margin-bottom:var(--space-xl);}
+    .blog-featured:hover{box-shadow:var(--shadow-lg);border-color:var(--muted-light);}
+    .blog-featured-visual{background:linear-gradient(135deg, var(--deep-navy) 0%, #1a3a5c 50%, #0d2b45 100%);display:flex;align-items:center;justify-content:center;padding:var(--space-xl);min-height:240px;position:relative;overflow:hidden;}
+    .blog-featured-visual::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%, rgba(37,99,235,0.2) 0%, transparent 60%);}
+    .blog-featured-visual-icon{position:relative;z-index:1;width:80px;height:80px;background:rgba(255,255,255,0.1);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:2.25rem;backdrop-filter:blur(4px);}
+    .blog-featured-content{padding:var(--space-xl);display:flex;flex-direction:column;justify-content:center;}
+    .blog-featured-badge{display:inline-flex;align-items:center;gap:4px;background:var(--blue-light);color:var(--blue);font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:4px 10px;border-radius:100px;margin-bottom:var(--space-sm);width:fit-content;}
+    .blog-featured h2{font-size:1.5rem;margin-bottom:var(--space-sm);line-height:1.3;}
+    .blog-featured h2 a{color:var(--deep-navy);}
+    .blog-featured h2 a:hover{color:var(--blue);}
+    .blog-featured p{font-size:0.9375rem;color:var(--muted);line-height:1.65;margin-bottom:var(--space);}
+    .blog-featured-meta{display:flex;gap:var(--space);font-size:0.75rem;color:var(--muted-light);align-items:center;flex-wrap:wrap;}
+
+    /* Card grid */
+    .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md);}
+    .blog-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition);display:flex;flex-direction:column;}
+    .blog-card:hover{box-shadow:var(--shadow-md);border-color:var(--muted-light);transform:translateY(-2px);}
+    .blog-card-header{background:var(--off-white);padding:var(--space) var(--space-md);border-bottom:1px solid var(--border-light);display:flex;align-items:center;gap:var(--space-sm);}
+    .blog-card-icon{width:36px;height:36px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .blog-card-icon.guide{background:#EFF6FF;color:#3B82F6;}
+    .blog-card-icon.howto{background:#ECFDF5;color:#059669;}
+    .blog-card-icon.review{background:#FFFBEB;color:#D97706;}
+    .blog-card-icon.safety{background:#FEF2F2;color:#DC2626;}
+    .blog-card-category{font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+    .blog-card-body{padding:var(--space-md);flex:1;display:flex;flex-direction:column;}
+    .blog-card-body h2{font-size:1.0625rem;margin-bottom:var(--space-sm);line-height:1.35;}
+    .blog-card-body h2 a{color:var(--deep-navy);}
+    .blog-card-body h2 a:hover{color:var(--blue);}
+    .blog-card-body p{font-size:0.875rem;color:var(--muted);line-height:1.6;margin-bottom:var(--space);flex:1;}
+    .blog-card-footer{border-top:1px solid var(--border-light);padding:var(--space) var(--space-md);display:flex;justify-content:space-between;align-items:center;}
+    .blog-card-date{font-size:0.75rem;color:var(--muted-light);}
+    .blog-card-cta{font-size:0.8125rem;font-weight:600;color:var(--blue);}
+    .blog-card-cta:hover{color:var(--blue-hover);}
+
+    /* Newsletter inset */
+    .blog-newsletter{background:var(--deep-navy);border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;margin:var(--space-xl) 0;position:relative;overflow:hidden;}
+    .blog-newsletter::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 60%);pointer-events:none;}
+    .blog-newsletter .container{position:relative;z-index:1;}
+    .blog-newsletter h3{color:var(--white);font-size:1.25rem;margin-bottom:var(--space-sm);}
+    .blog-newsletter p{color:rgba(255,255,255,0.55);font-size:0.9375rem;margin-bottom:var(--space-md);max-width:480px;margin-left:auto;margin-right:auto;}
+    .blog-newsletter-form{display:flex;gap:var(--space-sm);max-width:420px;margin:0 auto;}
+    .blog-newsletter-form input{flex:1;padding:12px 16px;border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius);background:rgba(255,255,255,0.08);color:var(--white);font-family:inherit;font-size:0.875rem;}
+    .blog-newsletter-form input::placeholder{color:rgba(255,255,255,0.35);}
+    .blog-newsletter-form input:focus{outline:none;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.12);}
+    .blog-newsletter-form .btn-primary{flex-shrink:0;}
+
+    @media (max-width:768px){
+      .blog-featured{grid-template-columns:1fr;}
+      .blog-featured-visual{min-height:160px;}
+      .blog-grid{grid-template-columns:1fr;}
+      .blog-hero-meta{gap:var(--space);}
+      .blog-newsletter-form{flex-direction:column;}
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +108,7 @@
         "@type": "BlogPosting",
         "headline": "What Is AI Trading? A Beginner's Guide",
         "url": "https://thetraderai.net/blog/what-is-ai-trading/",
-        "description": "Learn what AI trading is, how it works, and whether AI can help you make better trading decisions for UK traders."
+        "description": "Learn what AI trading is, how it works, and whether AI can help you make better trading decisions."
       },
       {
         "@type": "BlogPosting",
@@ -57,13 +126,13 @@
         "@type": "BlogPosting",
         "headline": "Best AI Trading Platforms UK 2026",
         "url": "https://thetraderai.net/blog/best-ai-trading-platforms-uk/",
-        "description": "Compare the best AI trading platforms in the UK for 2026 across research, strategy testing and risk tools."
+        "description": "Compare the best AI trading platforms in the UK for 2026."
       },
       {
         "@type": "BlogPosting",
         "headline": "AI Trading Australia Guide",
         "url": "https://thetraderai.net/blog/ai-trading-australia-guide/",
-        "description": "A beginner's guide to AI trading in Australia covering ASIC regulations and getting started."
+        "description": "A beginner's guide to AI trading in Australia covering ASIC regulations."
       }
     ]
   }
@@ -80,116 +149,155 @@
   </script>
 </head>
 <body>
-  <!-- Skip to content -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
   <header class="site-header" id="site-header" role="banner"></header>
-
-  <!-- Breadcrumbs -->
   <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumbs"></nav>
 
   <main id="main-content">
 
-    <!-- Page Hero -->
-    <section class="section reveal" id="blog-hero">
+    <!-- Dark Hero -->
+    <section class="blog-hero reveal">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Educational Resources</span>
+        <div class="blog-hero-content">
           <h1>AI Trading Blog</h1>
-          <p>Insights, guides and research on AI-assisted trading — from beginner questions to strategy testing. All articles are educational. No financial advice.</p>
+          <p>Educational articles, guides and research on AI-assisted trading. Learn about strategy testing, risk management and how to use AI tools responsibly — all in one place.</p>
+          <div class="blog-hero-meta">
+            <div class="blog-hero-stat"><strong>5</strong> Articles</div>
+            <div class="blog-hero-stat"><strong>Free</strong> Resources</div>
+            <div class="blog-hero-stat"><strong>Monthly</strong> Updates</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Listing -->
-    <section class="section reveal" id="blog-articles">
+    <!-- Featured Article -->
+    <section class="section reveal">
       <div class="container">
+        <span class="section-eyebrow" style="margin-bottom:var(--space);">Editor's Pick</span>
+        <div class="blog-featured">
+          <div class="blog-featured-visual">
+            <div class="blog-featured-visual-icon">📊</div>
+          </div>
+          <div class="blog-featured-content">
+            <span class="blog-featured-badge">Beginner's Guide</span>
+            <h2><a href="/blog/what-is-ai-trading/">What Is AI Trading? A Beginner's Guide</a></h2>
+            <p>Learn what AI trading is, how it works, and whether AI can help you make better trading decisions. A complete guide covering AI market analysis, strategy testing and tools for traders.</p>
+            <div class="blog-featured-meta">
+              <span>📅 August 2026</span>
+              <span>⏱ 8 min read</span>
+              <span>🏷 Guide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Articles Grid -->
+    <section class="section reveal" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <h2>All Articles</h2>
+        </div>
         <div class="blog-grid">
-          <!-- Article 1 -->
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-date">August 2026</span>
-              <h2><a href="/blog/what-is-ai-trading/">What Is AI Trading? A Beginner's Guide</a></h2>
-              <p>Learn what AI trading is, how it works, and whether AI can help you make better trading decisions. A complete beginner's guide covering AI market analysis, strategy testing and the tools available for UK traders.</p>
-            </div>
-            <div class="blog-card-footer">
-              <a href="/blog/what-is-ai-trading/" class="blog-card-cta">Read Article →</a>
-            </div>
-          </article>
 
-          <!-- Article 2 -->
+          <!-- Article: Backtest Without Coding -->
           <article class="blog-card">
+            <div class="blog-card-header">
+              <div class="blog-card-icon howto">⚡</div>
+              <span class="blog-card-category">How-To</span>
+            </div>
             <div class="blog-card-body">
-              <span class="blog-card-date">August 2026</span>
               <h2><a href="/blog/backtest-without-coding/">How to Backtest a Strategy Without Coding</a></h2>
-              <p>Learn how to backtest trading strategies without writing code. Turn plain English rules into testable strategies with AI-powered tools that handle the technical side for you.</p>
+              <p>Turn plain English trading rules into testable strategies using AI-powered tools. No programming required.</p>
             </div>
             <div class="blog-card-footer">
-              <a href="/blog/backtest-without-coding/" class="blog-card-cta">Read Article →</a>
+              <span class="blog-card-date">August 2026 · 6 min read</span>
+              <a href="/blog/backtest-without-coding/" class="blog-card-cta">Read →</a>
             </div>
           </article>
 
-          <!-- Article 3 -->
+          <!-- Article: Is AI Trading Safe -->
           <article class="blog-card">
+            <div class="blog-card-header">
+              <div class="blog-card-icon safety">🛡️</div>
+              <span class="blog-card-category">Regulation</span>
+            </div>
             <div class="blog-card-body">
-              <span class="blog-card-date">August 2026</span>
               <h2><a href="/blog/is-ai-trading-safe/">Is AI Trading Safe? UK Regulations Explained</a></h2>
-              <p>Understand how the UK FCA regulations apply to AI trading tools, what protections exist for retail traders, and how to use AI responsibly as part of your trading research process.</p>
+              <p>Understand FCA regulations, what protections exist for retail traders, and how to use AI responsibly.</p>
             </div>
             <div class="blog-card-footer">
-              <a href="/blog/is-ai-trading-safe/" class="blog-card-cta">Read Article →</a>
+              <span class="blog-card-date">August 2026 · 7 min read</span>
+              <a href="/blog/is-ai-trading-safe/" class="blog-card-cta">Read →</a>
             </div>
           </article>
 
-          <!-- Article 4 -->
+          <!-- Article: Best Platforms UK -->
           <article class="blog-card">
+            <div class="blog-card-header">
+              <div class="blog-card-icon review">⭐</div>
+              <span class="blog-card-category">Comparison</span>
+            </div>
             <div class="blog-card-body">
-              <span class="blog-card-date">August 2026</span>
               <h2><a href="/blog/best-ai-trading-platforms-uk/">Best AI Trading Platforms UK 2026</a></h2>
-              <p>Compare the best AI trading platforms in the UK for 2026. Review AI chart analysis, strategy backtesting, paper trading and risk management tools across the leading platforms.</p>
+              <p>Compare leading AI trading platforms across chart analysis, strategy backtesting, paper trading and risk tools.</p>
             </div>
             <div class="blog-card-footer">
-              <a href="/blog/best-ai-trading-platforms-uk/" class="blog-card-cta">Read Article →</a>
+              <span class="blog-card-date">August 2026 · 9 min read</span>
+              <a href="/blog/best-ai-trading-platforms-uk/" class="blog-card-cta">Read →</a>
             </div>
           </article>
 
-          <!-- Article 5 -->
+          <!-- Article: AI Trading Australia -->
           <article class="blog-card">
+            <div class="blog-card-header">
+              <div class="blog-card-icon guide">🌏</div>
+              <span class="blog-card-category">Guide</span>
+            </div>
             <div class="blog-card-body">
-              <span class="blog-card-date">August 2026</span>
               <h2><a href="/blog/ai-trading-australia-guide/">AI Trading Australia — Beginner's Guide 2026</a></h2>
-              <p>A complete beginner's guide to AI trading in Australia. Learn how AI trading tools work, understand ASIC regulations, and find out how to get started with paper trading and strategy testing.</p>
+              <p>How AI trading tools work in Australia, ASIC regulations explained, and how to get started with paper trading.</p>
             </div>
             <div class="blog-card-footer">
-              <a href="/blog/ai-trading-australia-guide/" class="blog-card-cta">Read Article →</a>
+              <span class="blog-card-date">August 2026 · 7 min read</span>
+              <a href="/blog/ai-trading-australia-guide/" class="blog-card-cta">Read →</a>
             </div>
           </article>
+
         </div>
 
-        <!-- Risk Disclaimer -->
-        <div class="risk-disclaimer" style="margin-top:var(--space-xl);">
+        <!-- Newsletter Signup -->
+        <div class="blog-newsletter reveal">
+          <h3>Stay Updated with New Articles</h3>
+          <p>Get notified when we publish new guides and research on AI trading. Educational content only — no spam.</p>
+          <div class="blog-newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email for blog updates">
+            <a href="/register/" class="btn btn-primary">Subscribe</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-off-white reveal" id="blog-cta">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Explore AI Trading?</h2>
+          <p>Access AI-powered research, chart analysis, strategy testing and paper trading — all in one platform.</p>
+        </div>
+        <p class="text-center">
+          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
+        </p>
+        <div class="risk-disclaimer" style="margin-top:var(--space-lg);">
           <strong>Educational Content Only:</strong> All articles are for educational and informational purposes. They do not constitute financial advice, investment recommendations, or trading guidance. Trading involves risk. Always conduct your own research.
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section bg-off-white reveal" id="blog-cta">
-      <div class="container">
-        <div class="section-header">
-          <h2>Ready to Apply What You've Learned?</h2>
-          <p>Explore Trader AI's tools — from AI-powered research to paper trading — all in one workspace.</p>
-        </div>
-        <p class="text-center">
-          <a href="/register/" class="btn btn-primary btn-lg">Create Free Access</a>
-        </p>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
   <footer id="site-footer" role="contentinfo"></footer>
 
   <script src="/js/utils.js"></script>
@@ -200,7 +308,6 @@
   <script src="/js/market-ticker.js"></script>
   <script src="/js/config.js"></script>
 
-  <!-- Replain Chat -->
   <script>
   window.replainSettings = { id: 'c6366b02-2531-4ee7-b3e1-7cc6f93d7e57' };
   (function(u){var s=document.createElement('script');s.async=true;s.src=u;
