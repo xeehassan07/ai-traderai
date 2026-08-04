@@ -153,33 +153,56 @@
     <!-- CHAT PREVIEW -->
     <section class="section-sm" id="chat-preview">
       <div class="container">
-        <div class="chat-preview">
-          <div class="chat-messages">
-            <div class="chat-message user">
-              <div class="chat-avatar" aria-hidden="true">👤</div>
-              <div class="chat-bubble"><strong>Analyse EUR/USD market structure on the 4-hour chart</strong></div>
-            </div>
-            <div class="chat-message assistant">
-              <div class="chat-avatar" aria-hidden="true">🤖</div>
-              <div class="chat-bubble">
-                <p><strong>Direct Summary</strong><br>EUR/USD is trading within a defined range between 1.0780 and 1.0920 on the 4-hour timeframe. The broader daily trend remains bullish, but short-term momentum is neutral.</p>
-                <p><strong>Supporting Context</strong><br>Price is above the 200-period moving average (1.0760), confirming the longer-term bullish structure. RSI is at 54, indicating neutral momentum. Support at 1.0780 has been tested three times in the past two weeks.</p>
-                <p><strong>Alternative Scenario</strong><br>If price breaks below 1.0780 with conviction, the bullish structure would be brought into question. Conversely, a break above 1.0920 could accelerate buying toward 1.1050.</p>
-                <p><strong>Key Risks</strong><br>Range-bound conditions can produce false breakouts. Key economic data releases this week could introduce volatility. AI-generated analysis may not capture all relevant factors.</p>
-                <p><strong>Limitations</strong><br>This analysis is based on visible price action and selected indicators. It does not account for fundamental factors, news events or macro conditions.</p>
-                <p><strong>Suggested Research Step</strong><br>Review the daily and weekly charts for broader context. Monitor price action around 1.0780 and 1.0920 levels. Check the economic calendar for upcoming high-impact events.</p>
+        <div class="chat-preview-compact" style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;max-width:640px;margin:0 auto;">
+
+          <!-- User message -->
+          <div style="display:flex;gap:10px;margin-bottom:16px;align-items:flex-start;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;flex-shrink:0;">RS</div>
+            <div style="flex:1;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <strong style="font-size:0.8125rem;">Rebecca S.</strong>
+                <span style="font-size:0.625rem;color:var(--muted);">09:42 AM</span>
+              </div>
+              <div style="background:var(--deep-navy);color:var(--white);padding:12px 14px;border-radius:12px;border-top-left-radius:4px;font-size:0.875rem;line-height:1.5;">
+                Analyse EUR/USD market structure on the 4-hour chart. Can you identify the key support and resistance zones?
               </div>
             </div>
           </div>
-          <div class="chat-prompt-chips">
+
+          <!-- AI response -->
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--deep-navy);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.75rem;flex-shrink:0;">TA</div>
+            <div style="flex:1;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                <strong style="font-size:0.8125rem;">Trader AI</strong>
+                <span style="font-size:0.625rem;color:var(--muted);">09:42 AM</span>
+              </div>
+              <div style="background:var(--off-white);padding:14px 16px;border-radius:12px;border-top-left-radius:4px;font-size:0.8125rem;color:var(--muted-dark);line-height:1.6;">
+                <strong style="color:var(--deep-navy);">Direct Summary</strong><br>
+                EUR/USD is trading within a defined range between 1.0780 and 1.0920 on the 4-hour timeframe. The broader daily trend remains bullish, but short-term momentum is neutral.<br><br>
+                <strong style="color:var(--deep-navy);">Supporting Context</strong><br>
+                Price is above the 200-period moving average (1.0760), confirming the longer-term bullish structure. RSI at 54 indicates neutral momentum. Support at 1.0780 has been tested three times in the past two weeks.<br><br>
+                <strong style="color:var(--deep-navy);">Alternative Scenario</strong><br>
+                If price breaks below 1.0780 with conviction, the bullish structure would be questioned. A break above 1.0920 could accelerate buying toward 1.1050.<br><br>
+                <strong style="color:var(--danger);">Key Risks</strong><br>
+                Range-bound conditions can produce false breakouts. Key economic data releases this week could introduce volatility. AI-generated analysis may not capture all relevant factors.<br><br>
+                <strong style="color:var(--deep-navy);">Suggested Research Step</strong><br>
+                Review daily and weekly charts for broader context. Monitor price action around 1.0780–1.0920. Check the economic calendar for high-impact events.
+              </div>
+            </div>
+          </div>
+
+          <!-- Prompt chips -->
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:12px;border-top:1px solid var(--border-light);">
             <button class="chat-chip" type="button">Analyse BTC/USD market structure</button>
             <button class="chat-chip" type="button">Explain the current trend on S&P 500</button>
             <button class="chat-chip" type="button">Identify key support and resistance zones</button>
             <button class="chat-chip" type="button">Review the risks in this strategy</button>
             <button class="chat-chip" type="button">Compare momentum and trend-following strategies</button>
-            <button class="chat-chip" type="button">Explain what this backtest result means</button>
           </div>
+
         </div>
+        <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:var(--space-sm);">Illustrative conversation — not a real user. AI responses may vary. Always conduct your own research.</p>
       </div>
     </section>
 
