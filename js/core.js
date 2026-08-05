@@ -226,7 +226,6 @@
               <li><a href="/trust-centre/">Trust Centre</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/performance-methodology/">Performance Methodology</a></li>
-              <li><a href="/demo/">Interactive Demo</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -265,7 +264,6 @@
 
     const parts = path.replace(/\/$/, '').split('/').filter(Boolean);
     const labelMap = {
-      'demo': 'Interactive Demo',
       'tools': 'Tools',
       'ai-chart-analyser': 'AI Chart Analyser',
       'ai-trading-assistant': 'AI Trading Assistant',

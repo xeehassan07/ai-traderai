@@ -40,7 +40,7 @@ const T = window.TraderAI;
         <h2>${opts.title || 'Ready to Explore Trader AI?'}</h2>
         <p>${opts.desc || 'Explore AI-assisted market research, strategy testing and risk tools in one platform.'}</p>
         <div class="hero-actions" style="justify-content:center;">
-          ${opts.ctas || '<a href="/demo/" class="btn btn-primary" style="background:var(--white);color:var(--deep-navy);">Explore the Demo</a>'}
+          ${opts.ctas || '<a href="/register/" class="btn btn-primary" style="background:var(--white);color:var(--deep-navy);">Create Free Account</a>'}
         </div>
       </div>
     </section>`;

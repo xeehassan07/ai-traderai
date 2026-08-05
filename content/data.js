@@ -15,7 +15,7 @@ const TraderAIContent = window.TraderAIContent || {};
     { q: 'Does Trader AI predict market prices?', a: 'No. Trader AI analyses market data and provides structured observations, but it does not predict future prices. AI-generated information can be incorrect, incomplete or outdated. All trading decisions remain your responsibility.' },
     { q: 'Does the AI execute trades automatically?', a: 'No. Trader AI does not execute trades, manage funds or place orders. It is a research and analysis platform. Any trading must be done through your own brokerage account.' },
     { q: 'What does "illustrative" data mean?', a: 'Illustrative data is sample data created to demonstrate how the platform works. It is not real trading performance. We clearly label all data as live, delayed, paper-traded, backtested or illustrative so you can understand what you are viewing.' },
-    { q: 'How do I start using Trader AI?', a: 'You can explore the <a href="/demo/">interactive demo</a> without creating an account. When you are ready, create an account to access more features. No payment is required to start.' },
+    { q: 'How do I start using Trader AI?', a: 'You can create a free account to start exploring the platform. No payment is required to get started.' },
     { q: 'What markets does Trader AI cover?', a: 'Trader AI provides analysis tools for forex, indices, commodities, cryptocurrencies, stocks and ETFs. Market coverage may vary depending on data provider availability.' },
     { q: 'Is my data secure?', a: 'We implement industry-standard security practices including encryption in transit and at rest. See our <a href="/trust-centre/">Trust Centre</a> for details on our security measures and privacy practices.' },
   ];
@@ -139,7 +139,6 @@ const TraderAIContent = window.TraderAIContent || {};
     ],
     company: [
       { label: 'Trust Centre', href: '/trust-centre/' },
-      { label: 'Interactive Demo', href: '/demo/' },
       { label: 'Contact', href: '#' },
     ],
   };
