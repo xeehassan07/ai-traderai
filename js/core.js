@@ -76,7 +76,6 @@
             </div>
           </div>
           <a href="/blog/">Blog</a>
-          <a href="/pricing/">Pricing</a>
           <a href="/trust-centre/">Trust Centre</a>
         </nav>
         <div class="header-actions">
@@ -111,7 +110,6 @@
           <a href="/ai-traders/">AI Traders Directory</a>
           <a href="/performance-methodology/">Performance Methodology</a>
         </details>
-        <a href="/pricing/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;">Pricing</a>
         <a href="/trust-centre/" class="mobile-nav-section" style="display:block;padding:16px 0;font-weight:600;white-space:nowrap;">Trust Centre</a>
         <details class="mobile-nav-section">
           <summary>Blog</summary>
@@ -228,7 +226,6 @@
               <li><a href="/trust-centre/">Trust Centre</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/performance-methodology/">Performance Methodology</a></li>
-              <li><a href="/pricing/">Pricing</a></li>
               <li><a href="/demo/">Interactive Demo</a></li>
             </ul>
           </div>
@@ -280,7 +277,6 @@
       'risk-management': 'Risk Management',
       'performance-methodology': 'Performance Methodology',
       'trust-centre': 'Trust Centre',
-      'pricing': 'Pricing',
       'ai-trading-platform': 'AI Trading Platform',
       'ai-trading-signals': 'AI Trading Signals',
     };

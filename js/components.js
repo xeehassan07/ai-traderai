@@ -91,18 +91,6 @@ const T = window.TraderAI;
       <div class="perf-chart" aria-label="Performance chart — illustrative">${data.chartNote || 'Equity curve — illustrative data'}</div>
     </div>`;
 
-  /* --- PricingCard ---------------------------------------- */
-  ns.PricingCard = (plan = {}) => `
-    <div class="pricing-card ${plan.featured ? 'featured' : ''}">
-      <h3 class="pricing-name">${plan.name}</h3>
-      <div class="pricing-price">${plan.price}<span>${plan.period || ''}</span></div>
-      <p class="pricing-desc">${plan.desc}</p>
-      <ul class="pricing-features">
-        ${(plan.features || []).map(f => `<li>${f}</li>`).join('')}
-      </ul>
-      <a href="${plan.ctaLink || '/demo/'}" class="btn ${plan.featured ? 'btn-primary' : 'btn-secondary'}">${plan.cta || 'Get Started'}</a>
-    </div>`;
-
   /* --- FAQSection ----------------------------------------- */
   ns.FAQSection = (faqs = []) => `
     <div class="faq-list">

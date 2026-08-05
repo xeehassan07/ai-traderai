@@ -11,7 +11,7 @@ const TraderAIContent = window.TraderAIContent || {};
   /* --- Global FAQs (used across pages) -------------------- */
   ns.globalFAQs = [
     { q: 'What is Trader AI?', a: 'Trader AI is a platform that provides AI-assisted market research, chart analysis, strategy building, backtesting, paper trading and risk management tools. It does not execute trades, manage funds or provide personalised financial advice.' },
-    { q: 'Is Trader AI free to use?', a: 'Trader AI offers a free tier with access to the guided demo, limited AI questions, sample strategy builder and public leaderboard. Paid plans with expanded features will be available. See our <a href="/pricing/">Pricing page</a> for details.' },
+    { q: 'Is Trader AI free to use?', a: 'Trader AI offers a free tier with access to the guided demo, limited AI questions, sample strategy builder and public leaderboard. Paid plans with expanded features will be available.' },
     { q: 'Does Trader AI predict market prices?', a: 'No. Trader AI analyses market data and provides structured observations, but it does not predict future prices. AI-generated information can be incorrect, incomplete or outdated. All trading decisions remain your responsibility.' },
     { q: 'Does the AI execute trades automatically?', a: 'No. Trader AI does not execute trades, manage funds or place orders. It is a research and analysis platform. Any trading must be done through your own brokerage account.' },
     { q: 'What does "illustrative" data mean?', a: 'Illustrative data is sample data created to demonstrate how the platform works. It is not real trading performance. We clearly label all data as live, delayed, paper-traded, backtested or illustrative so you can understand what you are viewing.' },
@@ -32,68 +32,6 @@ const TraderAIContent = window.TraderAIContent || {};
     { q: 'Does Trader AI execute trades?', a: 'No. Trader AI does not execute trades, manage funds, or place orders on your behalf. It is a research and analysis platform only. You must use your own brokerage account for any actual trading.' },
     { q: 'Is Trader AI financial advice?', a: 'No. Trader AI does not provide personalised financial advice, investment recommendations, or regulated advisory services. The platform provides information and tools to support your own research. You remain fully responsible for your trading decisions.' },
     { q: 'How is user data handled?', a: 'We use industry-standard encryption and access controls to protect your data. We do not sell your personal information. For full details, see our <a href="#">Privacy Policy</a> and the <a href="/trust-centre/">Trust Centre</a>.' },
-  ];
-
-  /* --- Pricing Plans -------------------------------------- */
-  ns.pricingPlans = [
-    {
-      name: 'Free',
-      price: '£0',
-      period: '',
-      desc: 'Explore the platform and try core features.',
-      featured: false,
-      cta: 'Start Free',
-      ctaLink: '/demo/',
-      features: [
-        'Guided platform demo',
-        'Limited AI questions',
-        'Limited chart analysis',
-        'Sample strategy builder',
-        'Sample backtest',
-        'Public leaderboard',
-        'Educational risk tools',
-      ],
-    },
-    {
-      name: 'Explorer',
-      price: '[£XX]',
-      period: '/month',
-      desc: 'For traders who want deeper analysis and testing tools.',
-      featured: true,
-      cta: 'Join Explorer',
-      ctaLink: '/demo/',
-      features: [
-        'Increased AI usage',
-        'Chart analysis allowance',
-        'Strategy Builder',
-        'Backtesting',
-        'Paper Trading',
-        'Watchlists',
-        'Risk tools',
-        'Saved reports',
-        'Standard support',
-      ],
-    },
-    {
-      name: 'Advanced',
-      price: '[£XX]',
-      period: '/month',
-      desc: 'For experienced traders who need more power and flexibility.',
-      featured: false,
-      cta: 'Join Advanced',
-      ctaLink: '/demo/',
-      features: [
-        'Higher AI usage',
-        'Advanced strategy conditions',
-        'Expanded backtesting',
-        'Multiple paper accounts',
-        'Advanced risk controls',
-        'Alerts',
-        'Exports',
-        'Priority support',
-        'Supported integrations',
-      ],
-    },
   ];
 
   /* --- Leaderboard Data (illustrative) -------------------- */
@@ -201,7 +139,6 @@ const TraderAIContent = window.TraderAIContent || {};
     ],
     company: [
       { label: 'Trust Centre', href: '/trust-centre/' },
-      { label: 'Pricing', href: '/pricing/' },
       { label: 'Interactive Demo', href: '/demo/' },
       { label: 'Contact', href: '#' },
     ],
