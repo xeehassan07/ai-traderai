@@ -54,7 +54,7 @@
     /* Grid */
     .grid{display:grid;gap:var(--space-md)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
     /* Section */
-    .section{padding:var(--space-3xl) 0}
+    .section{padding:var(--space-3xl) 0;content-visibility:auto;contain-intrinsic-size:500px}
     .bg-off-white{background:var(--off-white)}
     .section-header{text-align:center;max-width:680px;margin:0 auto var(--space-xl)}
     /* Form */
@@ -431,9 +431,11 @@
   </script>
 <script>
 window.replainSettings = { id: 'c6366b02-2531-4ee7-b3e1-7cc6f93d7e57' };
+setTimeout(function(){
 (function(u){var s=document.createElement('script');s.async=true;s.src=u;
 var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
 })('https://widget.replain.cc/dist/client.js');
+}, 3000);
 </script>
 </body>
 </html>
