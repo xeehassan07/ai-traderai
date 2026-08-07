@@ -16,11 +16,65 @@
   <link rel="preconnect" href="https://quantryxtech.com">
   <link rel="preload" as="font" href="/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_F.ttf" type="font/ttf" crossorigin>
   <link rel="preload" as="font" href="/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_F.ttf" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/main.css?v=7">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <style>
+    /* === Critical above-fold CSS — instant render === */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--white:#FFFFFF;--off-white:#F8F9FB;--deep-navy:#0D1A2B;--navy:#13273F;--blue:#2563EB;--blue-hover:#1D4ED8;--muted:#4B5563;--muted-dark:#374151;--border:#E2E4E8;--border-light:#F1F2F4;--font:"Manrope","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--space-xs:4px;--space-sm:8px;--space:16px;--space-md:24px;--space-lg:32px;--space-xl:48px;--space-2xl:64px;--space-3xl:96px;--max-width:1360px;--nav-height:64px;--radius:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;--transition:150ms ease}
+    html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font);font-size:1rem;line-height:1.65;color:var(--deep-navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--space-md)}
+    h1,h2,h3{font-weight:700;line-height:1.2;color:var(--deep-navy)}
+    h1{font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em}
+    h2{font-size:clamp(1.5rem,3vw,2.5rem)}
+    p{margin-bottom:1rem;color:var(--muted-dark)}
+    a{color:var(--blue);text-decoration:none}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:100;height:var(--nav-height);background:var(--white);border-bottom:1px solid var(--border)}
+    .site-header .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+    .header-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.25rem;color:var(--deep-navy)}
+    .header-logo-icon{width:auto;height:auto;background:none;border-radius:0;display:flex;align-items:center;justify-content:center}
+    .main-nav{display:flex;align-items:center;gap:4px}
+    .main-nav a,.main-nav button{display:inline-flex;align-items:center;gap:4px;padding:8px 14px;font-size:.875rem;font-weight:500;color:var(--muted-dark);border-radius:6px;transition:all var(--transition);white-space:nowrap;background:none;border:none;cursor:pointer;font-family:inherit}
+    .header-actions{display:flex;align-items:center;gap:8px}
+    .btn-signin{padding:8px 18px;font-size:.875rem;font-weight:600;color:var(--deep-navy);background:none;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-family:inherit;text-decoration:none}
+    .btn-primary-sm{padding:8px 18px;font-size:.875rem;font-weight:700;color:#fff;background:var(--deep-navy);border:none;border-radius:6px;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block}
+    .mobile-nav-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+    .mobile-nav-toggle span,.mobile-nav-toggle span::before,.mobile-nav-toggle span::after{display:block;width:22px;height:2px;background:var(--deep-navy);border-radius:1px;position:relative}.mobile-nav-toggle span::before{content:"";top:-7px;position:absolute}.mobile-nav-toggle span::after{content:"";top:7px;position:absolute}
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-size:1rem;font-weight:600;border-radius:var(--radius);border:none;cursor:pointer;font-family:inherit;text-decoration:none;white-space:nowrap;transition:all var(--transition)}
+    .btn-primary{background:var(--blue);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(37,99,235,0.35)}.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.45)}
+    .btn-light{background:#fff;color:var(--deep-navy);border:2px solid #fff;font-weight:700}
+    .btn-lg{padding:18px 36px;font-size:1.0625rem}
+    .btn-secondary{background:var(--white);color:var(--deep-navy);border:1px solid var(--border)}
+    /* Page hero */
+    .page-hero{background:var(--deep-navy);position:relative;overflow:hidden}
+    .page-hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    /* Grid */
+    .grid{display:grid;gap:var(--space-md)}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
+    /* Section */
+    .section{padding:var(--space-3xl) 0}
+    .bg-off-white{background:var(--off-white)}
+    .section-header{text-align:center;max-width:680px;margin:0 auto var(--space-xl)}
+    /* Form */
+    .form-group{margin-bottom:12px}.form-input,.form-select{width:100%;padding:12px 16px;font-size:.9375rem;font-family:var(--font);border:1px solid var(--border);border-radius:var(--radius);background:var(--white);color:var(--deep-navy);transition:border-color var(--transition)}.form-input:focus,.form-select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
+    .form-input.error,.form-select.error{border-color:#DC2626}
+    .form-error{display:none;font-size:.75rem;color:#DC2626;margin-top:4px}.form-error.visible{display:block}
+    .form-checkbox{display:flex;align-items:flex-start;gap:8px;font-size:.8125rem;color:var(--muted-dark);line-height:1.5}.form-checkbox input[type="checkbox"]{margin-top:2px;width:16px;height:16px;accent-color:var(--blue);flex-shrink:0}
+    .lead-form-error-msg{display:none;font-size:.8125rem;color:#DC2626;margin-bottom:12px;padding:8px 12px;background:#FEF2F2;border-radius:6px}.lead-form-error-msg.visible{display:block}
+    .btn-loading{opacity:0.7;pointer-events:none}
+    .form-required{color:#DC2626}
+    @media(max-width:1024px){.main-nav{display:none}.mobile-nav-toggle{display:flex}.header-actions .btn-signin,.header-actions .btn-primary-sm{display:none}}
+    @media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}}
+    /* Footer */
+    .site-footer{background:var(--deep-navy);padding:var(--space-3xl) 0 var(--space-xl);color:rgba(255,255,255,0.6)}
+  </style>
+  <link rel="stylesheet" href="/css/main.css?v=7" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/main.css?v=7"></noscript>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Trader AI Platform","applicationCategory":"Trading Application","operatingSystem":"Web","url":"https://thetraderai.net/ai-trading-platform/","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thetraderai.net/"},{"@type":"ListItem","position":2,"name":"AI Trading Platform","item":"https://thetraderai.net/ai-trading-platform/"}]}</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
+  <!-- Microsoft Clarity — async, non-blocking -->
+  <script>
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
