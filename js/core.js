@@ -12,7 +12,6 @@
   function mountAll() {
     detectHomepage();
     mountHeader();
-    mountBreadcrumbs();
     mountFooter();
     mountFAQAccordions();
     mountSmoothScroll();
