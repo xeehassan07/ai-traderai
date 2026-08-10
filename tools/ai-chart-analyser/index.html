@@ -87,13 +87,13 @@
     .analysis-badge.bullish{background:#ECFDF5;color:#16A34A}
     .analysis-badge.bearish{background:#FEF2F2;color:#DC2626}
     .analysis-badge.neutral{background:#F8F9FB;color:var(--muted-dark)}
-    /* Steps */
-    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-lg);max-width:900px;margin:0 auto}
-    .step-item{text-align:center;padding:var(--space-lg) var(--space-md);border-radius:var(--radius-lg);transition:all 0.25s ease;border:1px solid transparent;background:var(--white)}
-    .step-item:hover{border-color:var(--border);box-shadow:0 8px 30px rgba(13,26,43,0.06);transform:translateY(-2px)}
-    .step-num{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;font-size:1.25rem;font-weight:800;color:var(--blue);background:#EEF4FF;border-radius:50%;margin-bottom:var(--space)}
-    .step-item h4{font-size:1.0625rem;font-weight:700;color:var(--deep-navy);margin-bottom:6px}
-    .step-item p{font-size:0.875rem;color:var(--muted);line-height:1.6;margin-bottom:0}
+    /* Steps — scoped to beat main.css */
+    .ca-steps .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-lg)}
+    .ca-steps .step-item{text-align:center;padding:var(--space-lg) var(--space-md);border-radius:var(--radius-lg);transition:all 0.25s ease;border:1px solid transparent;background:var(--white)}
+    .ca-steps .step-item:hover{border-color:var(--border);box-shadow:0 8px 30px rgba(13,26,43,0.06);transform:translateY(-2px)}
+    .ca-steps .step-num{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;font-size:1.25rem;font-weight:800;color:var(--blue);background:#EEF4FF;border-radius:50%;margin-bottom:var(--space)}
+    .ca-steps .step-item h4{font-size:1.0625rem;font-weight:700;color:var(--deep-navy);margin-bottom:6px}
+    .ca-steps .step-item p{font-size:0.875rem;color:var(--muted);line-height:1.6;margin-bottom:0}
     /* Feature cards */
     .feature-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-lg);transition:all 0.2s ease;height:100%}
     .feature-card:hover{border-color:#CBD5E1;box-shadow:0 8px 30px rgba(13,26,43,0.06);transform:translateY(-2px)}
@@ -109,9 +109,9 @@
     .loading-spinner::before{content:"";width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin 0.7s linear infinite;margin-bottom:var(--space)}
     @media(max-width:768px){
       .chart-split{grid-template-columns:1fr;gap:var(--space-md)}
-      .steps-grid{grid-template-columns:1fr;gap:var(--space-sm)}
-      .step-item{display:flex;gap:var(--space);text-align:left;align-items:flex-start;padding:var(--space)}
-      .step-num{width:40px;height:40px;font-size:1rem;flex-shrink:0;margin-bottom:0}
+      .ca-steps .steps-grid{grid-template-columns:1fr;gap:var(--space-sm)}
+      .ca-steps .step-item{display:flex;gap:var(--space);text-align:left;align-items:flex-start;padding:var(--space)}
+      .ca-steps .step-num{width:40px;height:40px;font-size:1rem;flex-shrink:0;margin-bottom:0}
       .grid-3{grid-template-columns:1fr}
       .page-hero-actions{flex-direction:column;align-items:stretch}
       .page-hero-actions .btn{width:100%;text-align:center}
@@ -303,7 +303,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="section bg-off-white">
+    <section class="section bg-off-white ca-steps">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Simple Process</span>
