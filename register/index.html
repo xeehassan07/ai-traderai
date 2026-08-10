@@ -279,21 +279,6 @@
       });
     });
 
-    // Capture UTM params
-    function getUTMParams() {
-      var params = {};
-      var search = window.location.search.substring(1);
-      if (!search) return params;
-      search.split('&').forEach(function(pair) {
-        var parts = pair.split('=');
-        var key = decodeURIComponent(parts[0]);
-        if (key.indexOf('utm_') === 0) {
-          params[key] = decodeURIComponent(parts[1] || '');
-        }
-      });
-      return params;
-    }
-
     regForm.addEventListener('submit', function(e) {
       e.preventDefault();
       var valid = true;
@@ -349,8 +334,7 @@
       submitBtn.classList.add('btn-loading');
       if (errorEl) errorEl.classList.remove('visible');
 
-      // Build payload with UTMs
-      var utm = getUTMParams();
+      // Build payload
       var payload = {
         firstName: fname.value.trim(),
         lastName: lname.value.trim(),
@@ -361,8 +345,6 @@
         formName: 'registration_page',
         submittedAt: new Date().toISOString()
       };
-      // Merge UTM params
-      Object.keys(utm).forEach(function(k) { payload[k] = utm[k]; });
 
       // POST to backend
       fetch('https://quantryxtech.com/homeMailAction.php', {

@@ -37,19 +37,6 @@ const TraderAI = window.TraderAI || {};
     return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
   };
 
-  /* --- UTM Capture ---------------------------------------- */
-  ns.getUTMParams = () => {
-    const p = new URLSearchParams(window.location.search);
-    return {
-      utm_source: p.get('utm_source') || '',
-      utm_medium: p.get('utm_medium') || '',
-      utm_campaign: p.get('utm_campaign') || '',
-      utm_term: p.get('utm_term') || '',
-      utm_content: p.get('utm_content') || '',
-      referrer: document.referrer || '',
-    };
-  };
-
   /* --- Cookies -------------------------------------------- */
   ns.setCookie = (name, value, days = 30) => {
     const d = new Date();

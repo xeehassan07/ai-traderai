@@ -1,6 +1,6 @@
 /* ============================================================
    Trader AI — Lead Capture Form
-   Reusable form component with validation, UTM capture,
+   Reusable form component with validation,
    loading/success/error states.
    ============================================================ */
 
@@ -142,7 +142,6 @@ const T = window.TraderAI;
 
       // Collect data
       const formData = new FormData(form);
-      const utm = ns.getUTMParams();
       const payload = {
         first_name: formData.get('first_name') || '',
         email: formData.get('email') || '',
@@ -151,8 +150,7 @@ const T = window.TraderAI;
         phone: formData.get('phone') || '',
         source_page: sourcePage,
         form_name: formName,
-        ...utm,
-        referrer: utm.referrer || document.referrer,
+        referrer: document.referrer || '',
         submitted_at: ns.now(),
       };
 
