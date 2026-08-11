@@ -272,6 +272,7 @@
     var formBody = document.getElementById('reg-form-body');
     var successEl = document.getElementById('reg-success');
     var benefitsEl = document.querySelector('.register-benefits');
+    var registerGrid = document.querySelector('.register-grid');
 
     function showFieldError(field, errorId) {
       document.getElementById(field).classList.add('error');
@@ -367,8 +368,9 @@
         if (!res.ok) throw new Error('Server returned ' + res.status);
         // Success
         if (formBody) formBody.style.display = 'none';
-        if (successEl) { successEl.classList.add('visible'); successEl.style.maxWidth = '560px'; successEl.style.margin = '0 auto'; }
         if (benefitsEl) benefitsEl.style.display = 'none';
+        if (registerGrid) { registerGrid.style.gridTemplateColumns = '1fr'; registerGrid.style.maxWidth = '560px'; registerGrid.style.margin = '0 auto'; }
+        if (successEl) successEl.classList.add('visible');
       }).catch(function(err) {
         // Show error and restore form
         if (errorEl) {
