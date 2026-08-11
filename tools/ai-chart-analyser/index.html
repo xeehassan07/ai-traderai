@@ -247,7 +247,7 @@
                 </div>
               </div>
               <div style="text-align:center;margin-top:var(--space-md);">
-                <button type="button" id="submit-analysis-btn" class="btn btn-primary btn-lg" disabled style="opacity:0.5;width:100%;max-width:400px;">Submit for Deep Analysis →</button>
+                <a href="/register/" id="submit-analysis-btn" class="btn btn-primary btn-lg" style="opacity:0.5;pointer-events:none;width:100%;max-width:400px;">Submit for Deep Analysis →</a>
                 <p style="font-size:0.75rem;color:var(--muted);margin-top:8px;">Complete all three fields and upload a chart to enable analysis.</p>
               </div>
             </div>
@@ -461,9 +461,8 @@
 
     function checkFormComplete() {
       if (fileUploaded && marketSel.value && timeframeSel.value && objectiveSel.value) {
-        submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
-        submitBtn.style.cursor = 'pointer';
+        submitBtn.style.pointerEvents = 'auto';
       }
     }
 
