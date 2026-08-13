@@ -360,16 +360,20 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       }).then(function(res) {
-        if (!res.ok) throw new Error('Server returned ' + res.status);
-        // Success
-        if (formBody) formBody.style.display = 'none';
-        if (benefitsEl) benefitsEl.style.display = 'none';
-        if (registerGrid) { registerGrid.style.gridTemplateColumns = '1fr'; registerGrid.style.maxWidth = '560px'; registerGrid.style.margin = '0 auto'; }
-        if (successEl) successEl.classList.add('visible');
+        return res.json().catch(function() { return null; }).then(function(data) {
+          if (!res.ok || (data && data.status && data.status !== 'success')) {
+            throw new Error((data && data.message) || ('Server returned ' + res.status));
+          }
+          // Success
+          if (formBody) formBody.style.display = 'none';
+          if (benefitsEl) benefitsEl.style.display = 'none';
+          if (registerGrid) { registerGrid.style.gridTemplateColumns = '1fr'; registerGrid.style.maxWidth = '560px'; registerGrid.style.margin = '0 auto'; }
+          if (successEl) successEl.classList.add('visible');
+        });
       }).catch(function(err) {
         // Show error and restore form
         if (errorEl) {
-          errorEl.textContent = 'Something went wrong. Please try again or contact support.';
+          errorEl.textContent = (err && err.message && err.message !== 'Failed to fetch') ? err.message : 'Something went wrong. Please try again or contact support.';
           errorEl.classList.add('visible');
         }
         console.error('Registration form error:', err);
