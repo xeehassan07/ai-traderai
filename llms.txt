@@ -1,0 +1,37 @@
+# Trader AI
+
+> AI-assisted market research, chart analysis, strategy building, backtesting, paper trading and risk management tools for traders. Trader AI is a research and analysis platform only — it does not execute trades, manage funds, or provide regulated financial advice.
+
+## Getting Started
+
+- [Home](https://thetraderai.net/): Platform overview.
+- [Register](https://thetraderai.net/register/): Create a free account.
+
+## Tools
+
+- [AI Trading Platform](https://thetraderai.net/ai-trading-platform/): Full platform overview.
+- [AI Chart Analyser](https://thetraderai.net/tools/ai-chart-analyser/): Upload a chart and receive structured AI analysis.
+- [AI Trading Assistant](https://thetraderai.net/ai-trading-assistant/): Ask market questions in plain English.
+- [AI Strategy Builder](https://thetraderai.net/ai-strategy-builder/): Describe a strategy and generate rule-based logic.
+- [Strategy Backtesting](https://thetraderai.net/backtesting/): Test strategies against historical data.
+- [Paper Trading](https://thetraderai.net/paper-trading/): Practise in a simulated environment.
+- [Risk Management](https://thetraderai.net/risk-management/): Define risk before considering a trade.
+- [AI Trading Signals](https://thetraderai.net/ai-trading-signals/): Signals with context and clear data labelling.
+
+## AI Traders
+
+- [AI Trader Leaderboard](https://thetraderai.net/ai-trader-leaderboard/): Compare AI traders across risk and return dimensions.
+- [AI Traders Directory](https://thetraderai.net/ai-traders/): Profiles of available AI traders.
+
+## Trust & Methodology
+
+- [Trust Centre](https://thetraderai.net/trust-centre/): Data labelling, security and transparency.
+- [Performance Methodology](https://thetraderai.net/performance-methodology/): How results are measured and labelled.
+- [Risk Disclosure](https://thetraderai.net/risk-disclosure/): Trading risk disclosure.
+- [Privacy Policy](https://thetraderai.net/privacy-policy/): How user data is handled.
+
+## Company
+
+- [About Us](https://thetraderai.net/about-us/): Company information.
+- [Contact Us](https://thetraderai.net/contact-us/): Get in touch.
+- [Blog](https://thetraderai.net/blog/): Educational articles on AI trading.
