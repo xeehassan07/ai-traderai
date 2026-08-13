@@ -199,7 +199,7 @@
             </p>
           </div>
           <div class="footer-column">
-            <h4>Platform</h4>
+            <h3>Platform</h3>
             <ul>
               <li><a href="/ai-trading-platform/">AI Trading Platform</a></li>
               <li><a href="/ai-trading-assistant/">AI Trading Assistant</a></li>
@@ -209,7 +209,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>AI Tools</h4>
+            <h3>AI Tools</h3>
             <ul>
               <li><a href="/tools/ai-chart-analyser/">AI Chart Analyser</a></li>
               <li><a href="/backtesting/">Backtesting</a></li>
@@ -219,7 +219,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Company</h4>
+            <h3>Company</h3>
             <ul>
               <li><a href="/about-us/">About Us</a></li>
               <li><a href="/contact-us/">Contact Us</a></li>
@@ -229,7 +229,7 @@
             </ul>
           </div>
           <div class="footer-column">
-            <h4>Legal</h4>
+            <h3>Legal</h3>
             <ul>
               <li><a href="/privacy-policy/">Privacy Policy</a></li>
               <li><a href="/terms-of-service/">Terms of Service</a></li>
