@@ -43,7 +43,7 @@
     return `
       <div class="container">
         <a href="/" class="header-logo" aria-label="Trader AI Home">
-          <span class="header-logo-icon"><img src="/assets/images/logo.png" alt="Trader AI" style="height:32px;width:auto;" fetchpriority="high"></span>
+          <span class="header-logo-icon"><img src="/assets/images/logo.png" alt="Trader AI" width="149" height="32" fetchpriority="high"></span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <div class="nav-dropdown">
@@ -189,7 +189,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="/" class="header-logo" style="color:#fff;">
-              <span class="header-logo-icon" style="background:none;width:auto;"><img src="/assets/images/logo.png" alt="Trader AI" style="height:28px;width:auto;"></span>
+              <span class="header-logo-icon" style="background:none;width:auto;"><img src="/assets/images/logo.png" alt="Trader AI" width="131" height="28"></span>
             </a>
             <p>AI-assisted market research, chart analysis, strategy testing and risk tools for traders.</p>
             <p style="font-size:0.8125rem;color:rgba(255,255,255,0.7);margin-top:12px;line-height:1.8;">
