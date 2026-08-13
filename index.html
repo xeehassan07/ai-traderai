@@ -34,9 +34,13 @@
   <link rel="stylesheet" href="/css/main.css?v=8" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/main.css?v=8"></noscript>
   <style>@media(max-width:768px){.sticky-cta{display:flex!important}}</style>
-  <link rel="stylesheet" href="/css/fonts.css">
   <style>
     /* === CRITICAL ABOVE-THE-FOLD CSS — Instant render, no FOUC === */
+    @font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_F.woff2') format('woff2'),url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_F.ttf') format('truetype')}
+    @font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFO_F.woff2') format('woff2'),url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFO_F.ttf') format('truetype')}
+    @font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_F.woff2') format('woff2'),url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_F.ttf') format('truetype')}
+    @font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_F.woff2') format('woff2'),url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_F.ttf') format('truetype')}
+    @font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_F.woff2') format('woff2'),url('/fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_F.ttf') format('truetype')}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--deep-navy:#0D1A2B;--white:#fff;--border:#E2E4E8;--blue:#2563EB;--muted:#4B5563;--muted-dark:#374151;--nav-height:64px;--max-width:1360px;--space:16px;--space-md:24px;--space-lg:32px;--space-xl:48px;--space-2xl:64px;--space-3xl:96px;--radius:8px;--radius-md:12px;--radius-lg:16px;--terminal-bg:#091C31;--terminal-accent:#3B82F6}
     html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
@@ -192,23 +196,27 @@
   ]
 }
   </script>
-  <!-- Google Analytics -->
+  <!-- Google Analytics (deferred 3.5s to keep main thread free during LCP) -->
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-BLHY0BZWMX");
-  var s = document.createElement('script');
-  s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BLHY0BZWMX';
-  document.head.appendChild(s);
+  setTimeout(function(){
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-BLHY0BZWMX");
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BLHY0BZWMX';
+    document.head.appendChild(s);
+  }, 3500);
   </script>
-  <!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity (deferred 3.5s) -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xy1feronjb");
+    setTimeout(function(){
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xy1feronjb");
+    }, 3500);
   </script>
 </head>
 <body class="home">
@@ -283,7 +291,7 @@
               <!-- Chart Area -->
               <div class="ht-chart-area">
                 <div class="ht-chart">
-                  <svg viewBox="0 0 420 200" preserveAspectRatio="none" style="width:100%;height:100%;">
+                  <svg width="420" height="200" viewBox="0 0 420 200" preserveAspectRatio="none" style="width:100%;height:100%;">
                     <defs>
                       <linearGradient id="htGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></linearGradient>
                     </defs>
