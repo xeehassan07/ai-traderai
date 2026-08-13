@@ -209,12 +209,12 @@
                   <span class="form-error" id="reg-email-error">Please enter a valid email address.</span>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="reg-phone">Phone Number <span class="optional">(optional)</span></label>
+                  <label class="form-label" for="reg-phone">Phone Number <span class="form-required">*</span></label>
                   <div style="display:grid;grid-template-columns:120px 1fr;gap:8px;">
                     <select class="form-select" id="reg-phone-code" name="phone_code">
                       <option value="+44">🇬🇧 +44</option><option value="+1">🇺🇸 +1</option><option value="+49">🇩🇪 +49</option><option value="+33">🇫🇷 +33</option><option value="+61">🇦🇺 +61</option><option value="+971">🇦🇪 +971</option><option value="+91">🇮🇳 +91</option><option value="+81">🇯🇵 +81</option><option value="+86">🇨🇳 +86</option><option value="+65">🇸🇬 +65</option><option value="+852">🇭🇰 +852</option><option value="+34">🇪🇸 +34</option><option value="+39">🇮🇹 +39</option><option value="+31">🇳🇱 +31</option><option value="+46">🇸🇪 +46</option><option value="+41">🇨🇭 +41</option><option value="+966">🇸🇦 +966</option><option value="+974">🇶🇦 +974</option>
                     </select>
-                    <input class="form-input" type="tel" id="reg-phone" name="phone" autocomplete="tel-national" placeholder="7123 456789">
+                    <input class="form-input" type="tel" id="reg-phone" name="phone" required autocomplete="tel-national" placeholder="7123 456789">
                   </div>
                   <span class="form-error" id="reg-phone-error">Please enter a valid phone number.</span>
                 </div>
@@ -308,17 +308,19 @@
         showFieldError('reg-email', 'reg-email-error'); valid = false;
       } else { clearFieldError('reg-email', 'reg-email-error'); }
 
-      // Phone (optional)
+      // Phone (required)
       var phoneCode = document.getElementById('reg-phone-code').value;
       var phoneInput = document.getElementById('reg-phone');
       var phoneVal = phoneInput.value.trim().replace(/\s+/g, '');
       var fullPhone = phoneVal ? phoneCode + phoneVal : '';
-      if (phoneVal && phoneVal.length < 6) {
+      if (!phoneVal) {
         showFieldError('reg-phone', 'reg-phone-error');
-        document.getElementById('reg-phone-error').textContent = 'Phone number seems too short. Enter a valid number or leave empty.';
+        document.getElementById('reg-phone-error').textContent = 'Please enter your phone number.';
         valid = false;
-      } else if (!phoneVal) {
-        clearFieldError('reg-phone', 'reg-phone-error');
+      } else if (phoneVal.length < 6) {
+        showFieldError('reg-phone', 'reg-phone-error');
+        document.getElementById('reg-phone-error').textContent = 'Phone number seems too short. Enter a valid number.';
+        valid = false;
       } else {
         clearFieldError('reg-phone', 'reg-phone-error');
       }
